@@ -1,0 +1,2667 @@
+Content-Length: 906
+
+{"jsonrpc":"2.0","result":{"capabilities":{"textDocumentSync":{"openClose":true,"change":2,"willSave":null,"willSaveWaitUntil":null,"save":true},"completionProvider":{"triggerCharacters":[":"],"resolveProvider":true,"completionItem":{"labelDetailsSupport":true}},"hoverProvider":{"workDoneProgress":null},"signatureHelpProvider":{"triggerCharacters":[" "],"retriggerCharacters":[]},"definitionProvider":{"workDoneProgress":null},"referencesProvider":{},"documentHighlightProvider":{},"documentSymbolProvider":{},"documentFormattingProvider":{},"documentRangeFormattingProvider":{},"documentOnTypeFormattingProvider":{"firstTriggerCharacter":"(","moreTriggerCharacter":[")"]},"executeCommandProvider":{"commands":["cl-lsp.interrupt","cl-lsp.eval-range","cl-lsp.eval-last-expression"]},"experimental":null},"serverInfo":{"name":"cl-lsp","version":"0.1.0","swankPort":null,"microsPort":4005}},"id":1761679872}Content-Length: 260
+
+{"jsonrpc":"2.0","result":[{"name":"FOO","detail":"(defun foo (arg)","kind":12,"range":{"start":{"line":12,"character":10},"end":{"line":12,"character":10}},"selectionRange":{"start":{"line":12,"character":10},"end":{"line":12,"character":10}}}],"id":38331207}Content-Length: 134
+
+{"jsonrpc":"2.0","result":{"contents":"","range":{"start":{"line":16,"character":1},"end":{"line":16,"character":4}}},"id":1445083716}Content-Length: 44
+
+{"jsonrpc":"2.0","result":[],"id":277931378}Content-Length: 45
+
+{"jsonrpc":"2.0","result":[],"id":1438181251}Content-Length: 261
+
+{"jsonrpc":"2.0","result":[{"name":"FOO","detail":"(defun foo (arg)","kind":12,"range":{"start":{"line":12,"character":10},"end":{"line":12,"character":10}},"selectionRange":{"start":{"line":12,"character":10},"end":{"line":12,"character":10}}}],"id":680334104}Content-Length: 261
+
+{"jsonrpc":"2.0","result":[{"name":"FOO","detail":"(defun foo (arg)","kind":12,"range":{"start":{"line":12,"character":10},"end":{"line":12,"character":10}},"selectionRange":{"start":{"line":12,"character":10},"end":{"line":12,"character":10}}}],"id":171540258}Error while parsing arguments to DESTRUCTURING-BIND:
+                                                                                                                                                                                                                                                                       too many elements in
+                                                                                                                                                                                                                                                                         ("do"
+                                                                                                                                                                                                                                                                          ((0
+                                                                                                                                                                                                                                                                            "d"))
+                                                                                                                                                                                                                                                                          "function, macro"
+                                                                                                                                                                                                                                                                          "(do varlist endlist &body body)"
+                                                                                                                                                                                                                                                                          "## Function
+```lisp
+(do varlist endlist &body body)
+```
+DO ({(Var [Init] [Step])}*) (Test Exit-Form*) Declaration* Form*
+  Iteration construct. Each Var is initialized in parallel to the value of the
+  specified Init form. On subsequent iterations, the Vars are assigned the
+  value of the Step form (if any) in parallel. The Test is evaluated before
+  each evaluation of the body Forms. When the Test is true, the Exit-Forms
+  are evaluated as a PROGN, with the result being the value of the DO. A block
+  named NIL is established around the entire expansion, allowing RETURN to be
+  used as an alternate exit mechanism."
+                                                                                                                                                                                                                                                                          "0000000000")
+                                                                                                                                                                                                                                                                       to satisfy lambda list
+                                                                                                                                                                                                                                                                         (LABEL
+                                                                                                                                                                                                                                                                          CLASSIFICATION
+                                                                                                                                                                                                                                                                          SIGNATURE
+                                                                                                                                                                                                                                                                          DOCUMENTATION
+                                                                                                                                                                                                                                                                          SORT-TEXT):
+                                                                                                                                                                                                                                                                       exactly 5 expected, but got 6
+   [Condition of type SB-KERNEL::ARG-COUNT-ERROR]
+
+#<ENVIRONMENT {1004DB1373}>
+   [Environment of thread #<THREAD tid=76 "jsonrpc/transport/stdio processing" RUNNING {1005FA1913}>]
+
+Available restarts:
+ 0: [ABORT] abort thread
+(#<THREAD tid=76 "jsonrpc/transport/stdio processing" RUNNING {1005FA1913}>)
+
+Backtrace:
+ 0: (SB-C::CHECK-DS-LIST #<unavailable argument> #<unavailable argument> #<unavailable argument> #<unavailable argument>)
+ 1: ((LAMBDA (LEM-LANGUAGE-SERVER::COMPLETED-ITEM) :IN LEM-LANGUAGE-SERVER::CALL-LSP-METHOD-AUX) (do ((0 d)) function, macro (do varlist endlist &body body) ## Function
+```lisp
+(do varlist endlist &body body)
+```
+DO ({(Var [Init] [Step])}*) (Test Exit-Form*) Declaration* Form*
+  Iteration construct. Each Var is initialized in parallel to the value of the
+  specified Init form. On subsequent iterations, the Vars are assigned the
+  value of the Step form (if any) in parallel. The Test is evaluated before
+  each evaluation of the body Forms. When the Test is true, the Exit-Forms
+  are evaluated as a PROGN, with the result being the value of the DO. A block
+  named NIL is established around the entire expansion, allowing RETURN to be
+  used as an alternate exit mechanism. 0000000000))
+ 2: ((FLET SB-IMPL::F :IN SB-IMPL::VECTOR-MAP-INTO/SIMPLE-VECTOR) (do ((0 d)) function, macro (do varlist endlist &body body) ## Function
+```lisp
+(do varlist endlist &body body)
+```
+DO ({(Var [Init] [Step])}*) (Test Exit-Form*) Declaration* Form*
+  Iteration construct. Each Var is initialized in parallel to the value of the
+  specified Init form. On subsequent iterations, the Vars are assigned the
+  value of the Step form (if any) in parallel. The Test is evaluated before
+  each evaluation of the body Forms. When the Test is true, the Exit-Forms
+  are evaluated as a PROGN, with the result being the value of the DO. A block
+  named NIL is established around the entire expansion, allowing RETURN to be
+  used as an alternate exit mechanism. 0000000000))
+ 3: (SB-KERNEL:%MAP-FOR-EFFECT-ARITY-1 #<FUNCTION (FLET SB-IMPL::F :IN SB-IMPL::VECTOR-MAP-INTO/SIMPLE-VECTOR) {7F318427E46B}> ((do ((0 d)) function, macro (do varlist endlist &body body) ## Function
+```lisp
+(do varlist endlist &body body)
+```
+DO ({(Var [Init] [Step])}*) (Test Exit-Form*) Declaration* Form*
+  Iteration construct. Each Var is initialized in parallel to the value of the
+  specified Init form. On subsequent iterations, the Vars are assigned the
+  value of the Step form (if any) in parallel. The Test is evaluated before
+  each evaluation of the body Forms. When the Test is true, the Exit-Forms
+  are evaluated as a PROGN, with the result being the value of the DO. A block
+  named NIL is established around the entire expansion, allowing RETURN to be
+  used as an alternate exit mechanism. 0000000000) (do* ((0 d)) function, macro (do* varlist endlist &body body) ## Function
+```lisp
+(do* varlist endlist &body body)
+```
+DO* ({(Var [Init] [Step])}*) (Test Exit-Form*) Declaration* Form*
+  Iteration construct. Each Var is initialized sequentially (like LET*) to the
+  value of the specified Init form. On subsequent iterations, the Vars are
+  sequentially assigned the value of the Step form (if any). The Test is
+  evaluated before each evaluation of the body Forms. When the Test is true,
+  the Exit-Forms are evaluated as a PROGN, with the result being the value
+  of the DO. A block named NIL is established around the entire expansion,
+  allowing RETURN to be used as an alternate exit mechanism. 0000000001) (dpb ((0 d)) function (dpb newbyte bytespec integer) ## Function
+```lisp
+(dpb newbyte bytespec integer)
+```
+Return new integer with newbyte in specified position, newbyte is right justified. 0000000002) (decf ((0 d)) function, macro (decf place &optional (delta 1)) ## Function
+```lisp
+(decf place &optional (delta 1))
+```
+The first argument is some location holding a number. This number is
+  decremented by the second argument, DELTA, which defaults to 1. 0000000003) (debug ((0 d))  NIL  0000000004) (defun ((0 d)) function, macro (defun name lambda-list &body body) ## Function
+```lisp
+(defun name lambda-list &body body)
+```
+Define a function at top level. 0000000005) (deref ((0 d)) function (deref alien &rest indices) ## Function
+```lisp
+(deref alien &rest indices)
+```
+Dereference an Alien pointer or array. If an array, the indices are used
+   as the indices of the array element to access. If a pointer, one index can
+   optionally be specified, giving the equivalent of C pointer arithmetic. 0000000006) (defvar ((0 d)) function, macro (defvar var &optional (val nil) (doc nil)) ## Function
+```lisp
+(defvar var &optional (val nil) (doc nil))
+```
+Define a special variable at top level. Declare the variable
+  SPECIAL and, optionally, initialize it. If the variable already has a
+  value, the old value is not clobbered. The third argument is an optional
+  documentation string for the variable. 0000000007) (delete ((0 d)) function (delete item sequence &rest args &key from-end (test #'eql) (test-not nil)
+        (start 0) (end nil) (count nil) (key nil)) ## Function
+```lisp
+(delete item sequence &rest args &key from-end (test #'eql) (test-not nil)
+        (start 0) (end nil) (count nil) (key nil))
+```
+Return a sequence formed by destructively removing the specified ITEM from
+  the given SEQUENCE. 0000000008) (dolist ((0 d)) function, macro (dolist (var list &optional (result nil)) &body body) ## Function
+```lisp
+(dolist (var list &optional (result nil)) &body body)
+``` 0000000009) (double ((0 d))  NIL  0000000010) (declaim ((0 d)) function, macro (declaim &rest
+         specs) ## Function
+```lisp
+(declaim &rest
+         specs)
+```
+DECLAIM Declaration*
+  Do a declaration or declarations for the global environment. 0000000011) (declare ((0 d))  NIL  0000000012) (defsetf ((0 d)) function, macro (defsetf access-fn &rest rest) ## Function
+```lisp
+(defsetf access-fn &rest rest)
+```
+Associates a SETF update function or macro with the specified access
+  function or macro. The format is complex. See the manual for details. 0000000013) (deftype ((0 d)) function, macro (deftype name lambda-list &body body) ## Function
+```lisp
+(deftype name lambda-list &body body)
+```
+Define a new type, with syntax like DEFMACRO. 0000000014) (dotimes ((0 d)) function, macro (dotimes (var count &optional (result nil)) &body body) ## Function
+```lisp
+(dotimes (var count &optional (result nil)) &body body)
+``` 0000000015) (dribble ((0 d)) function (dribble &optional pathname &key (if-exists append)) ## Function
+```lisp
+(dribble &optional pathname &key (if-exists append))
+```
+With a file name as an argument, dribble opens the file and sends a
+  record of further I/O to that file. Without an argument, it closes
+  the dribble file, and quits logging. 0000000016) (dissect: ((0 d)) package NIL ## Variable
+
+NIL names a constant variable:
+  Value: NIL 0000000017) (defclass ((0 d)) function, macro (defclass name direct-superclasses direct-slots &rest options) ## Function
+```lisp
+(defclass name direct-superclasses direct-slots &rest options)
+``` 0000000018) (defmacro ((0 d)) function, macro (defmacro name lambda-list &body body) ## Function
+```lisp
+(defmacro name lambda-list &body body)
+``` 0000000019) (describe ((0 d)) function (describe object &optional (stream-designator *standard-output*)) ## Function
+```lisp
+(describe object &optional (stream-designator *standard-output*))
+```
+Print a description of OBJECT to STREAM-DESIGNATOR. 0000000020) (defglobal ((0 d)) function, macro (defglobal name value &optional (doc nil)) ## Function
+```lisp
+(defglobal name value &optional (doc nil))
+```
+Defines NAME as a global variable that is always bound. VALUE is evaluated
+and assigned to NAME both at compile- and load-time, but only if NAME is not
+already bound.
+
+Global variables share their values between all threads, and cannot be
+locally bound, declared special, defined as constants, and neither bound
+nor defined as symbol macros.
+
+See also the declarations SB-EXT:GLOBAL and SB-EXT:ALWAYS-BOUND. 0000000021) (defmethod ((0 d)) function, macro (defmethod name &rest args) ## Function
+```lisp
+(defmethod name &rest args)
+``` 0000000022) (defstruct ((0 d)) function, macro (defstruct name-and-options &rest slot-descriptions) ## Function
+```lisp
+(defstruct name-and-options &rest slot-descriptions)
+```
+DEFSTRUCT {Name | (Name Option*)} [Documentation] {Slot | (Slot [Default] {Key Value}*)}
+   Define the structure type Name. Instances are created by MAKE-<name>,
+   which takes &KEY arguments allowing initial slot values to the specified.
+   A SETF'able function <name>-<slot> is defined for each slot to read and
+   write slot values. <name>-p is a type predicate.
+
+   Popular DEFSTRUCT options (see manual for others):
+
+   (:CONSTRUCTOR Name)
+   (:PREDICATE Name)
+       Specify the name for the constructor or predicate.
+
+   (:CONSTRUCTOR Name Lambda-List)
+       Specify the name and arguments for a BOA constructor
+       (which is more efficient when keyword syntax isn't necessary.)
+
+   (:INCLUDE Supertype Slot-Spec*)
+       Make this type a subtype of the structure type Supertype. The optional
+       Slot-Specs override inherited slot options.
+
+   Slot options:
+
+   :TYPE Type-Spec
+       Asserts that the value of this slot is always of the specified type.
+
+   :READ-ONLY {T | NIL}
+       If true, no setter function is defined for this slot. 0000000023) (delete-if ((0 d)) function (delete-if predicate sequence &rest args &key from-end (start 0) (key nil)
+           (end nil) (count nil)) ## Function
+```lisp
+(delete-if predicate sequence &rest args &key from-end (start 0) (key nil)
+           (end nil) (count nil))
+```
+Return a sequence formed by destructively removing the elements satisfying
+  the specified PREDICATE from the given SEQUENCE. 0000000024) (directory ((0 d)) function (directory pathspec &key (resolve-symlinks t)) ## Function
+```lisp
+(directory pathspec &key (resolve-symlinks t))
+```
+Return a list of PATHNAMEs, each the TRUENAME of a file matching PATHSPEC.
+
+Note that the interaction between this ANSI-specified TRUENAMEing and
+the semantics of the Unix filesystem (symbolic links..) means this
+function can sometimes return files which don't have the same
+directory as PATHSPEC.
+
+If :RESOLVE-SYMLINKS is NIL, don't resolve symbolic links in matching
+filenames. 0000000025) (*debug-io* ((1 d)) variable NIL ## Variable
+
+*DEBUG-IO* names a special variable:
+  Declared type: STREAM
+  Declared always-bound.
+  Value: #<TWO-WAY-STREAM :INPUT-STREAM #<MICROS/GRAY::SLIME-INPUT-STREAM {10045F08A3}> :OUTPUT-STREAM #<MICROS/GRAY::SLIME-OUTPUT-STREAM {1004702F83}> {100472FD33}>
+  Documentation:
+    interactive debugging stream 0000000026) (defgeneric ((0 d)) function, macro (defgeneric fun-name
+    lambda-list
+  &body
+  options) ## Function
+```lisp
+(defgeneric fun-name
+    lambda-list
+  &body
+  options)
+``` 0000000027) (defpackage ((0 d)) function, macro (defpackage package
+  &rest
+  options) ## Function
+```lisp
+(defpackage package
+  &rest
+  options)
+```
+Defines a new package called PACKAGE. Each of OPTIONS should be one of the
+   following: 
+    (USE {package-name}*)
+    (EXPORT {symbol-name}*)
+    (IMPORT-FROM <package-name> {symbol-name}*)
+    (SHADOW {symbol-name}*)
+    (SHADOWING-IMPORT-FROM <package-name> {symbol-name}*)
+    (LOCAL-NICKNAMES {(local-nickname actual-package-name)}*)
+    (LOCK boolean)
+    (IMPLEMENT {package-name}*)
+    (DOCUMENTATION doc-string)
+    (INTERN {symbol-name}*)
+    (SIZE <integer>)
+    (NICKNAMES {package-name}*)
+   All options except SIZE, LOCK, and :DOCUMENTATION can be used multiple
+   times. 0000000028) (deprecated ((0 d))  NIL ## Declaration
+
+DEPRECATED names an SBCL-specific declaration. 0000000029) (digit-char ((0 d)) function (digit-char weight &optional (radix 10)) ## Function
+```lisp
+(digit-char weight &optional (radix 10))
+```
+All arguments must be integers. Returns a character object that represents
+a digit of the given weight in the specified radix. Returns NIL if no such
+character exists. 0000000030) (do-symbols ((0 d)) function, macro (do-symbols (var &optional (package '*package*) result-form) &body body-decls) ## Function
+```lisp
+(do-symbols (var &optional (package '*package*) result-form) &body body-decls)
+```
+DO-SYMBOLS (VAR [PACKAGE [RESULT-FORM]]) {DECLARATION}* {TAG | FORM}*
+   Executes the FORMs at least once for each symbol accessible in the given
+   PACKAGE with VAR bound to the current symbol. 0000000031) (ed ((1 d)) function (ed &optional x) ## Function
+```lisp
+(ed &optional x)
+```
+Starts the editor (on a file or a function if named).  Functions
+from the list *ED-FUNCTIONS* are called in order with X as an argument
+until one of them returns non-NIL; these functions are responsible for
+signalling a FILE-ERROR to indicate failure to perform an operation on
+the file system. 0000000032) (declaration ((0 d))  NIL ## Declaration
+
+DECLARATION names a standard declaration. 0000000033) (defconstant ((0 d)) function, macro (defconstant name value &optional (doc nil)) ## Function
+```lisp
+(defconstant name value &optional (doc nil))
+```
+Define a global constant, saying that the value is constant and may be
+  compiled into code. If the variable already has a value, and this is not
+  EQL to the new value, the code is not portable (undefined behavior). The
+  third argument is an optional documentation string for the variable. 0000000034) (delete-file ((0 d)) function (delete-file file) ## Function
+```lisp
+(delete-file file)
+```
+Delete the specified FILE.
+
+If FILE is a stream, on Windows the stream is closed immediately. On Unix
+platforms the stream remains open, allowing IO to continue: the OS resources
+associated with the deleted file remain available till the stream is closed as
+per standard Unix unlink() behaviour. 0000000035) (denominator ((0 d)) function (denominator number) ## Function
+```lisp
+(denominator number)
+```
+Return the denominator of NUMBER, which must be rational. 0000000036) (disassemble ((0 d)) function (disassemble object &key (stream *standard-output*) (use-labels t)) ## Function
+```lisp
+(disassemble object &key (stream *standard-output*) (use-labels t))
+```
+Disassemble the compiled code associated with OBJECT, which can be a
+  function, a lambda expression, or a symbol with a function definition. If
+  it is not already compiled, the compiler is called to produce something to
+  disassemble. 0000000037) (decode-float ((0 d)) function (decode-float f) ## Function
+```lisp
+(decode-float f)
+```
+Return three values:
+   1) a floating-point number representing the significand. This is always
+      between 0.5 (inclusive) and 1.0 (exclusive).
+   2) an integer representing the exponent.
+   3) -1.0 or 1.0 (i.e. the sign of the argument.) 0000000038) (defparameter ((0 d)) function, macro (defparameter var val &optional (doc nil)) ## Function
+```lisp
+(defparameter var val &optional (doc nil))
+```
+Define a parameter that is not normally changed by the program,
+  but that may be changed without causing an error. Declare the
+  variable special and sets its value to VAL, overwriting any
+  previous value. The third argument is an optional documentation
+  string for the parameter. 0000000039) (digit-char-p ((0 d)) function (digit-char-p char &optional (radix 10)) ## Function
+```lisp
+(digit-char-p char &optional (radix 10))
+```
+If char is a digit in the specified radix, returns the fixnum for which
+that digit stands, else returns NIL. 0000000040) (double-float ((0 d)) type, class NIL ## Class
+
+DOUBLE-FLOAT names the built-in-class #<BUILT-IN-CLASS COMMON-LISP:DOUBLE-FLOAT>:
+  Class precedence-list: DOUBLE-FLOAT, FLOAT, REAL, NUMBER, T
+  Direct superclasses: FLOAT
+  No subclasses.
+  Sealed.
+  No direct slots.
+----------
+## Type
+
+DOUBLE-FLOAT names a primitive type-specifier:
+  Lambda-list: (&OPTIONAL (LOW (QUOTE *)) (HIGH (QUOTE *))) 0000000041) (delete-if-not ((0 d)) function (delete-if-not predicate sequence &rest args &key from-end (start 0) (end nil)
+               (key nil) (count nil)) ## Function
+```lisp
+(delete-if-not predicate sequence &rest args &key from-end (start 0) (end nil)
+               (key nil) (count nil))
+```
+Return a sequence formed by destructively removing the elements not
+  satisfying the specified PREDICATE from the given SEQUENCE. 0000000042) (deposit-field ((0 d)) function (deposit-field newbyte bytespec integer) ## Function
+```lisp
+(deposit-field newbyte bytespec integer)
+```
+Return new integer with newbyte in specified position, newbyte is not right justified. 0000000043) (documentation ((0 d)) function, generic-function (documentation object doc-type) ## Function
+```lisp
+(documentation object doc-type)
+```
+Return the documentation string of Doc-Type for X, or NIL if none
+exists. System doc-types are VARIABLE, FUNCTION, STRUCTURE, TYPE, SETF, and T.
+
+Function documentation is stored separately for function names and objects:
+DEFUN, LAMBDA, &co create function objects with the specified documentation
+strings.
+
+ (SETF (DOCUMENTATION NAME 'FUNCTION) STRING)
+
+sets the documentation string stored under the specified name, and
+
+ (SETF (DOCUMENTATION FUNC T) STRING)
+
+sets the documentation string stored in the function object.
+
+ (DOCUMENTATION NAME 'FUNCTION)
+
+returns the documentation stored under the function name if any, and
+falls back on the documentation in the function object if necessary. 0000000044) (delete-package ((0 d)) function (delete-package package-designator) ## Function
+```lisp
+(delete-package package-designator)
+```
+Delete the package designated by PACKAGE-DESIGNATOR from the package
+  system data structures. 0000000045) (do-all-symbols ((0 d)) function, macro (do-all-symbols (var &optional result-form) &body body-decls) ## Function
+```lisp
+(do-all-symbols (var &optional result-form) &body body-decls)
+```
+DO-ALL-SYMBOLS (VAR [RESULT-FORM]) {DECLARATION}* {TAG | FORM}*
+   Executes the FORMs once for each symbol in every package with VAR bound
+   to the current symbol. 0000000046) (dynamic-extent ((0 d))  NIL ## Declaration
+
+DYNAMIC-EXTENT names a standard declaration. 0000000047) (*debugger-hook* ((1 d)) variable NIL ## Variable
+
+*DEBUGGER-HOOK* names a special variable:
+  Declared type: (OR FUNCTION SYMBOL)
+  Declared always-bound.
+  Value: #<FUNCTION MICROS:SWANK-DEBUGGER-HOOK>
+  Documentation:
+    This is either NIL or a function of two arguments, a condition and the value
+       of *DEBUGGER-HOOK*. This function can either handle the condition or return
+       which causes the standard debugger to execute. The system passes the value
+       of this variable to the function because it binds *DEBUGGER-HOOK* to NIL
+       around the invocation. 0000000048) (describe-object ((0 d)) function, generic-function (describe-object object stream) ## Function
+```lisp
+(describe-object object stream)
+``` 0000000049) (define-condition ((0 d)) function, macro (define-condition name
+    (&rest parent-types)
+    (&rest slot-specs)
+  &body
+  options) ## Function
+```lisp
+(define-condition name
+    (&rest parent-types)
+    (&rest slot-specs)
+  &body
+  options)
+```
+DEFINE-CONDITION Name (Parent-Type*) (Slot-Spec*) Option*
+   Define NAME as a condition type. This new type inherits slots and its
+   report function from the specified PARENT-TYPEs. A slot spec is a list of:
+     (slot-name :reader <rname> :initarg <iname> {Option Value}*
+
+   The DEFINE-CLASS slot options :ALLOCATION, :INITFORM, [slot] :DOCUMENTATION
+   and :TYPE and the overall options :DEFAULT-INITARGS and
+   [type] :DOCUMENTATION are also allowed.
+
+   The :REPORT option is peculiar to DEFINE-CONDITION. Its argument is either
+   a string or a two-argument lambda or function name. If a function, the
+   function is called with the condition and stream to report the condition.
+   If a string, the string is printed.
+
+   Condition types are classes, but (as allowed by ANSI and not as described in
+   CLtL2) are neither STANDARD-OBJECTs nor STRUCTURE-OBJECTs. WITH-SLOTS and
+   SLOT-VALUE may not be used on condition objects. 0000000050) (delete-directory ((0 d)) function (delete-directory pathspec &key recursive) ## Function
+```lisp
+(delete-directory pathspec &key recursive)
+```
+Deletes the directory designated by PATHSPEC (a pathname designator).
+Returns the truename of the directory deleted.
+
+If RECURSIVE is false (the default), signals an error unless the directory is
+empty. If RECURSIVE is true, first deletes all files and subdirectories. If
+RECURSIVE is true and the directory contains symbolic links, the links are
+deleted, not the files and directories they point to.
+
+Signals an error if PATHSPEC designates a file or a symbolic link instead of a
+directory, or if the directory could not be deleted for any reason.
+
+Both
+
+   (DELETE-DIRECTORY "/tmp/foo")
+   (DELETE-DIRECTORY "/tmp/foo/")
+
+delete the "foo" subdirectory of "/tmp", or signal an error if it does not
+exist or if is a file or a symbolic link. 0000000051) (disable-debugger ((0 d)) function (disable-debugger) ## Function
+```lisp
+(disable-debugger)
+```
+When invoked, this function will turn off both the SBCL debugger
+and LDB (the low-level debugger).  See also ENABLE-DEBUGGER. 0000000052) (division-by-zero ((0 d)) type, class NIL ## Class
+
+DIVISION-BY-ZERO names the condition-class #<SB-PCL::CONDITION-CLASS COMMON-LISP:DIVISION-BY-ZERO>:
+  Class precedence-list: DIVISION-BY-ZERO, ARITHMETIC-ERROR, ERROR,
+                         SERIOUS-CONDITION, CONDITION, SB-PCL::SLOT-OBJECT, T
+  Direct superclasses: ARITHMETIC-ERROR
+  No subclasses.
+  No direct slots. 0000000053) (*debug-condition* ((1 d))  NIL  0000000054) (*debug-readtable* ((1 d)) variable NIL ## Variable
+
+*DEBUG-READTABLE* names a special variable:
+  Value: #<READTABLE {1000027AD3}>
+  Documentation:
+    *READTABLE* for the debugger 0000000055) (defconstant-uneql ((0 d)) type, class NIL ## Class
+
+DEFCONSTANT-UNEQL names the condition-class #<SB-PCL::CONDITION-CLASS SB-EXT:DEFCONSTANT-UNEQL>:
+  Class precedence-list: DEFCONSTANT-UNEQL, SB-INT:REFERENCE-CONDITION, ERROR,
+                         SERIOUS-CONDITION, CONDITION, SB-PCL::SLOT-OBJECT, T
+  Direct superclasses: SB-INT:REFERENCE-CONDITION, ERROR
+  No subclasses.
+  Direct slots:
+    SB-KERNEL::NAME
+      Initargs: :NAME
+      Readers: DEFCONSTANT-UNEQL-NAME
+    SB-KERNEL::OLD-VALUE
+      Initargs: :OLD-VALUE
+      Readers: DEFCONSTANT-UNEQL-OLD-VALUE
+    SB-KERNEL::NEW-VALUE
+      Initargs: :NEW-VALUE
+      Readers: DEFCONSTANT-UNEQL-NEW-VALUE 0000000056) (define-alien-type ((0 d)) function, macro (define-alien-type name type) ## Function
+```lisp
+(define-alien-type name type)
+```
+Define the alien type NAME to be equivalent to TYPE. Name may be NIL for
+   STRUCT and UNION types, in which case the name is taken from the type
+   specifier. 0000000057) (delete-duplicates ((0 d)) function (delete-duplicates sequence &rest args &key (test #'eql) (test-not nil)
+                   (start 0) (end nil) from-end (key nil)) ## Function
+```lisp
+(delete-duplicates sequence &rest args &key (test #'eql) (test-not nil)
+                   (start 0) (end nil) from-end (key nil))
+```
+The elements of SEQUENCE are examined, and if any two match, one is
+   discarded. The resulting sequence, which may be formed by destroying the
+   given sequence, is returned.
+
+   The :TEST-NOT argument is deprecated. 0000000058) (delete-file-error ((0 d)) type, class NIL ## Class
+
+DELETE-FILE-ERROR names the condition-class #<SB-PCL::CONDITION-CLASS SB-EXT:DELETE-FILE-ERROR>:
+  Class precedence-list: DELETE-FILE-ERROR, SB-INT:SIMPLE-FILE-ERROR,
+                         SIMPLE-CONDITION, FILE-ERROR, ERROR, SERIOUS-CONDITION,
+                         CONDITION, SB-PCL::SLOT-OBJECT, T
+  Direct superclasses: SB-INT:SIMPLE-FILE-ERROR
+  No subclasses.
+  No direct slots. 0000000059) (deprecation-error ((0 d)) function, type, class (deprecation-error software version namespace name replacements) ## Function
+```lisp
+(deprecation-error software version namespace name replacements)
+```
+----------
+## Class
+
+DEPRECATION-ERROR names the condition-class #<SB-PCL::CONDITION-CLASS SB-EXT:DEPRECATION-ERROR>:
+  Documentation:
+    This error is signaled at run-time when an attempt is made to use
+    a thing that is in :FINAL deprecation, i.e. call a function or access
+    a variable.
+  Class precedence-list: DEPRECATION-ERROR, ERROR, SERIOUS-CONDITION,
+                         DEPRECATION-CONDITION, SB-INT:REFERENCE-CONDITION,
+                         CONDITION, SB-PCL::SLOT-OBJECT, T
+  Direct superclasses: ERROR, DEPRECATION-CONDITION
+  No subclasses.
+  No direct slots. 0000000060) (destructuring-bind ((0 d)) function, macro (destructuring-bind lambda-list expression &body body) ## Function
+```lisp
+(destructuring-bind lambda-list expression &body body)
+```
+Bind the variables in LAMBDA-LIST to the corresponding values in the
+tree structure resulting from the evaluation of EXPRESSION. 0000000061) (dynamic-space-size ((0 d)) function (dynamic-space-size) ## Function
+```lisp
+(dynamic-space-size)
+```
+Size of the dynamic space in bytes. 0000000062) (*debug-help-string* ((1 d)) variable NIL ## Variable
+
+*DEBUG-HELP-STRING* names a global variable:
+  Declared always-bound.
+  Value: "The debug prompt is square brackets, with number(s) indicating the current
+  control stack level and, if you've entered the debugger recursively, how
+  deeply recursed you are.
+Any command -- including the name of a restart -- may be uniquely abbreviated.
+The debugger rebinds various special variables for controlling i/o, sometimes
+  to defaults (much like WITH-STANDARD-IO-SYNTAX does) and sometimes to
+  its own special values, based on SB-EXT:*DEBUG-PRINT-VARIABLE-ALIST*.
+Debug commands do not affect *, //, and similar variables, but evaluation in
+  the debug loop does affect these variables.
+SB-DEBUG:*FLUSH-DEBUG-ERRORS* controls whether errors at the debug prompt
+  drop you deeper into the debugger. The default NIL allows recursive entry
+  to debugger.
+
+Getting in and out of the debugger:
+  TOPLEVEL, TOP  exits debugger and returns to top level REPL
+  RESTART        invokes restart numbered as shown (prompt if not given).
+  ERROR          prints the error condition and restart cases.
+
+  The number of any restart, or its name, or a unique abbreviation for its
+   name, is a valid command, and is the same as using RESTART to invoke
+   that restart.
+
+Changing frames:
+  UP     up frame         DOWN     down frame
+  BOTTOM bottom frame     FRAME n  frame n (n=0 for top frame)
+
+Inspecting frames:
+  BACKTRACE [n]  shows n frames going down the stack.
+  LIST-LOCALS, L lists locals in current frame.
+  PRINT, P       displays function call for current frame.
+  SOURCE [n]     displays frame's source form with n levels of enclosing forms.
+
+Stepping:
+  START Selects the CONTINUE restart if one exists and starts
+        single-stepping. Single stepping affects only code compiled with
+        under high DEBUG optimization quality. See User Manual for details.
+  STEP  Steps into the current form.
+  NEXT  Steps over the current form.
+  OUT   Stops stepping temporarily, but resumes it when the topmost frame that
+        was stepped into returns.
+  STOP  Stops single-stepping.
+
+Function and macro commands:
+ (SB-DEBUG:ARG n)
+    Return the n'th argument in the current frame.
+ (SB-DEBUG:VAR string-or-symbol [id])
+    Returns the value of the specified variable in the current frame.
+
+Other commands:
+  RETURN expr
+    Return the values resulting from evaluation of expr from the
+    current frame, if this frame was compiled with a sufficiently high
+    DEBUG optimization quality.
+
+  RESTART-FRAME
+    Restart execution of the current frame, if this frame is for a
+    global function which was compiled with a sufficiently high
+    DEBUG optimization quality.
+
+  SLURP
+    Discard all pending input on *STANDARD-INPUT*. (This can be
+    useful when the debugger was invoked to handle an error in
+    deeply nested input syntax, and now the reader is confused.)" 0000000063) (define-modify-macro ((0 d)) function, macro (define-modify-macro name lambda-list function &optional doc-string) ## Function
+```lisp
+(define-modify-macro name lambda-list function &optional doc-string)
+```
+Creates a new read-modify-write macro like PUSH or INCF. 0000000064) (define-symbol-macro ((0 d)) function, macro (define-symbol-macro name expansion) ## Function
+```lisp
+(define-symbol-macro name expansion)
+``` 0000000065) (defined-type-name-p ((0 d)) function (defined-type-name-p name &optional env) ## Function
+```lisp
+(defined-type-name-p name &optional env)
+```
+Returns T if NAME is known to name a type specifier, otherwise NIL. 0000000066) (do-external-symbols ((0 d)) function, macro (do-external-symbols (var &optional (package '*package*) result-form)
+ &body
+ body-decls) ## Function
+```lisp
+(do-external-symbols (var &optional (package '*package*) result-form)
+ &body
+ body-decls)
+```
+DO-EXTERNAL-SYMBOLS (VAR [PACKAGE [RESULT-FORM]]) {DECL}* {TAG | FORM}*
+   Executes the FORMs once for each external symbol in the given PACKAGE with
+   VAR bound to the current symbol. 0000000067) (define-alien-routine ((0 d)) function, macro (define-alien-routine name result-type &rest args) ## Function
+```lisp
+(define-alien-routine name result-type &rest args)
+```
+DEFINE-ALIEN-ROUTINE Name Result-Type {(Arg-Name Arg-Type [Style])}*
+
+Define a foreign interface function for the routine with the specified NAME.
+Also automatically DECLAIM the FTYPE of the defined function.
+
+NAME may be either a string, a symbol, or a list of the form (string symbol).
+
+RETURN-TYPE is the alien type for the function return value. VOID may be
+used to specify a function with no result.
+
+The remaining forms specify individual arguments that are passed to the
+routine. ARG-NAME is a symbol that names the argument, primarily for
+documentation. ARG-TYPE is the C type of the argument. STYLE specifies the
+way that the argument is passed.
+
+:IN
+      An :IN argument is simply passed by value. The value to be passed is
+      obtained from argument(s) to the interface function. No values are
+      returned for :In arguments. This is the default mode.
+
+:OUT
+      The specified argument type must be a pointer to a fixed sized object.
+      A pointer to a preallocated object is passed to the routine, and the
+      the object is accessed on return, with the value being returned from
+      the interface function. :OUT and :IN-OUT cannot be used with pointers
+      to arrays, records or functions.
+
+:COPY
+      This is similar to :IN, except that the argument values are stored
+      on the stack, and a pointer to the object is passed instead of
+      the value itself.
+
+:IN-OUT
+      This is a combination of :OUT and :COPY. A pointer to the argument is
+      passed, with the object being initialized from the supplied argument
+      and the return value being determined by accessing the object on
+      return. 0000000068) (define-setf-expander ((0 d)) function, macro (define-setf-expander access-fn lambda-list &body body) ## Function
+```lisp
+(define-setf-expander access-fn lambda-list &body body)
+```
+Syntax like DEFMACRO, but creates a setf expander function. The body
+  of the definition must be a form that returns five appropriate values. 0000000069) (directory-namestring ((0 d)) function (directory-namestring pathname) ## Function
+```lisp
+(directory-namestring pathname)
+```
+Return a string representation of the directory in PATHNAME. 0000000070) (double-float-epsilon ((0 d)) variable NIL ## Variable
+
+DOUBLE-FLOAT-EPSILON names a constant variable:
+  Value: 1.1102230246251568d-16 0000000071) (decode-universal-time ((0 d)) function (decode-universal-time universal-time &optional time-zone) ## Function
+```lisp
+(decode-universal-time universal-time &optional time-zone)
+```
+Converts a universal-time to decoded time format returning the following
+   nine values: second, minute, hour, date, month, year, day of week (0 =
+   Monday), T (daylight savings time) or NIL (standard time), and timezone.
+   Completely ignores daylight-savings-time when time-zone is supplied. 0000000072) (define-alien-callable ((0 d)) function, macro (define-alien-callable name
+    result-type
+    typed-lambda-list
+  &body
+  body) ## Function
+```lisp
+(define-alien-callable name
+    result-type
+    typed-lambda-list
+  &body
+  body)
+```
+Define an alien callable function in the alien callable namespace with result
+type RESULT-TYPE and with lambda list specifying the alien types of the
+arguments. 0000000073) (define-alien-variable ((0 d)) function, macro (define-alien-variable name type) ## Function
+```lisp
+(define-alien-variable name type)
+```
+Define NAME as an external alien variable of type TYPE. NAME should
+be a list of a string holding the alien name and a symbol to use as
+the Lisp name. If NAME is just a symbol or string, then the other name
+is guessed from the one supplied. 0000000074) (define-compiler-macro ((0 d)) function, macro (define-compiler-macro name
+    lambda-list
+  &body
+  body) ## Function
+```lisp
+(define-compiler-macro name
+    lambda-list
+  &body
+  body)
+```
+Define a compiler-macro for NAME. 0000000075) (define-source-context ((0 d)) function, macro (define-source-context name
+    lambda-list
+  &body
+  body) ## Function
+```lisp
+(define-source-context name
+    lambda-list
+  &body
+  body)
+```
+DEFINE-SOURCE-CONTEXT Name Lambda-List Form*
+   This macro defines how to extract an abbreviated source context from the
+   Named form when it appears in the compiler input. Lambda-List is a DEFMACRO
+   style lambda-list used to parse the arguments. The Body should return a
+   list of subforms suitable for a "~{~S ~}" format string. 0000000076) (deprecation-condition ((0 d)) type, class NIL ## Class
+
+DEPRECATION-CONDITION names the condition-class #<SB-PCL::CONDITION-CLASS SB-EXT:DEPRECATION-CONDITION>:
+  Documentation:
+    Superclass for deprecation-related error and warning
+    conditions.
+  Class precedence-list: DEPRECATION-CONDITION, SB-INT:REFERENCE-CONDITION,
+                         CONDITION, SB-PCL::SLOT-OBJECT, T
+  Direct superclasses: SB-INT:REFERENCE-CONDITION
+  Direct subclasses: DEPRECATION-ERROR, FINAL-DEPRECATION-WARNING,
+                     LATE-DEPRECATION-WARNING, EARLY-DEPRECATION-WARNING
+  Direct slots:
+    SB-KERNEL::NAMESPACE
+      Initargs: :NAMESPACE
+      Readers: DEPRECATION-CONDITION-NAMESPACE
+    SB-KERNEL::NAME
+      Initargs: :NAME
+      Readers: DEPRECATION-CONDITION-NAME
+    SB-KERNEL::REPLACEMENTS
+      Initargs: :REPLACEMENTS
+      Readers: DEPRECATION-CONDITION-REPLACEMENTS
+    SB-KERNEL::SOFTWARE
+      Initargs: :SOFTWARE
+      Readers: DEPRECATION-CONDITION-SOFTWARE
+    SB-KERNEL::VERSION
+      Initargs: :VERSION
+      Readers: DEPRECATION-CONDITION-VERSION
+    SB-KERNEL::RUNTIME-ERROR
+      Initargs: :RUNTIME-ERROR
+      Initform: 'NIL
+      Readers: DEPRECATION-CONDITION-RUNTIME-ERROR 0000000077) (disable-package-locks ((0 d))  NIL ## Declaration
+
+DISABLE-PACKAGE-LOCKS names an SBCL-specific declaration. 0000000078) (*disassemble-annotate* ((1 d)) variable NIL ## Variable
+
+*DISASSEMBLE-ANNOTATE* names a special variable:
+  Value: NIL
+  Documentation:
+    Annotate DISASSEMBLE output with source code. 0000000079) (defconstant-uneql-name ((0 d)) function (defconstant-uneql-name condition) ## Function
+```lisp
+(defconstant-uneql-name condition)
+``` 0000000080) (define-hash-table-test ((0 d)) function, macro (define-hash-table-test name hash-function) ## Function
+```lisp
+(define-hash-table-test name hash-function)
+```
+Defines NAME as a new kind of hash table test for use with the :TEST
+argument to MAKE-HASH-TABLE, and associates a default HASH-FUNCTION with it.
+
+NAME must be a symbol naming a global two argument equivalence predicate.
+Afterwards both 'NAME and #'NAME can be used with :TEST argument. In both
+cases HASH-TABLE-TEST will return the symbol NAME.
+
+HASH-FUNCTION must be a symbol naming a global hash function consistent with
+the predicate, or be a LAMBDA form implementing one in the current lexical
+environment. The hash function must compute the same hash code for any two
+objects for which NAME returns true, and subsequent calls with already hashed
+objects must always return the same hash code.
+
+Note: The :HASH-FUNCTION keyword argument to MAKE-HASH-TABLE can be used to
+override the specified default hash-function.
+
+Attempting to define NAME in a locked package as hash-table test causes a
+package lock violation.
+
+Examples:
+
+  ;;; 1.
+
+  ;; We want to use objects of type FOO as keys (by their
+  ;; names.) EQUALP would work, but would make the names
+  ;; case-insensitive -- which we don't want.
+  (defstruct foo (name nil :type (or null string)))
+
+  ;; Define an equivalence test function and a hash function.
+  (defun foo-name= (f1 f2) (equal (foo-name f1) (foo-name f2)))
+  (defun sxhash-foo-name (f) (sxhash (foo-name f)))
+
+  (define-hash-table-test foo-name= sxhash-foo-name)
+
+  ;; #'foo-name would work too.
+  (defun make-foo-table () (make-hash-table :test 'foo-name=))
+
+  ;;; 2.
+
+  (defun == (x y) (= x y))
+
+  (define-hash-table-test ==
+    (lambda (x)
+      ;; Hash codes must be consistent with test, so
+      ;; not (SXHASH X), since
+      ;;   (= 1 1.0)                   => T
+      ;;   (= (SXHASH 1) (SXHASH 1.0)) => NIL
+      ;; Note: this doesn't deal with complex numbers or
+      ;; bignums too large to represent as double floats.
+      (sxhash (coerce x 'double-float))))
+
+  ;; #'== would work too
+  (defun make-number-table () (make-hash-table :test '==)) 0000000081) (*debug-beginner-help-p* ((1 d)) variable NIL ## Variable
+
+*DEBUG-BEGINNER-HELP-P* names a special variable:
+  Value: T
+  Documentation:
+    Should the debugger display beginner-oriented help messages? 0000000082) (*derive-function-types* ((1 d)) variable NIL ## Variable
+
+*DERIVE-FUNCTION-TYPES* names a special variable:
+  Value: NIL
+  Documentation:
+    Should the compiler assume that function types will never change,
+      so that it can use type information inferred from current definitions
+      to optimize code which uses those definitions? Setting this true
+      gives non-ANSI, early-CMU-CL behavior. It can be useful for improving
+      the efficiency of stable code. 0000000083) (define-load-time-global ((0 d)) function, macro (define-load-time-global name value &optional (doc nil)) ## Function
+```lisp
+(define-load-time-global name value &optional (doc nil))
+```
+Defines NAME as a global variable that is always bound. VALUE is evaluated
+and assigned to NAME at load-time, but only if NAME is not already bound.
+
+Attempts to read NAME at compile-time will signal an UNBOUND-VARIABLE error
+unless it has otherwise been assigned a value.
+
+See also DEFGLOBAL which assigns the VALUE at compile-time too. 0000000084) (describe-compiler-policy ((0 d)) function (describe-compiler-policy &optional spec) ## Function
+```lisp
+(describe-compiler-policy &optional spec)
+```
+Print all global optimization settings, augmented by SPEC. 0000000085) (*default-external-format* ((1 d)) variable NIL ## Variable
+
+*DEFAULT-EXTERNAL-FORMAT* names a special variable:
+  Value: :UTF-8 0000000086) (define-method-combination ((0 d)) function, macro (define-method-combination name
+  . args) ## Function
+```lisp
+(define-method-combination name
+  . args)
+``` 0000000087) (deprecation-condition-name ((0 d)) function (deprecation-condition-name condition) ## Function
+```lisp
+(deprecation-condition-name condition)
+``` 0000000088) (*default-pathname-defaults* ((1 d)) variable NIL ## Variable
+
+*DEFAULT-PATHNAME-DEFAULTS* names a special variable:
+  Declared type: PATHNAME
+  Declared always-bound.
+  Value: #P"/home/runner/Lisp-sbcl/" 0000000089) (defconstant-uneql-new-value ((0 d)) function (defconstant-uneql-new-value condition) ## Function
+```lisp
+(defconstant-uneql-new-value condition)
+``` 0000000090) (defconstant-uneql-old-value ((0 d)) function (defconstant-uneql-old-value condition) ## Function
+```lisp
+(defconstant-uneql-old-value condition)
+``` 0000000091) (*debug-print-variable-alist* ((1 d)) variable NIL ## Variable
+
+*DEBUG-PRINT-VARIABLE-ALIST* names a special variable:
+  Value: NIL
+  Documentation:
+    an association list describing new bindings for special variables
+    to be used within the debugger. Eg.
+    
+     ((*PRINT-LENGTH* . 10) (*PRINT-LEVEL* . 6) (*PRINT-PRETTY* . NIL))
+    
+    The variables in the CAR positions are bound to the values in the CDR
+    during the execution of some debug commands. When evaluating arbitrary
+    expressions in the debugger, the normal values of the printer control
+    variables are in effect.
+    
+    Initially empty, *DEBUG-PRINT-VARIABLE-ALIST* is typically used to
+    provide bindings for printer control variables. 0000000092) (deprecation-condition-version ((0 d)) function (deprecation-condition-version condition) ## Function
+```lisp
+(deprecation-condition-version condition)
+``` 0000000093) (double-float-negative-epsilon ((0 d)) variable NIL ## Variable
+
+DOUBLE-FLOAT-NEGATIVE-EPSILON names a constant variable:
+  Value: 5.551115123125784d-17 0000000094) (deprecation-condition-software ((0 d)) function (deprecation-condition-software condition) ## Function
+```lisp
+(deprecation-condition-software condition)
+``` 0000000095) (double-float-negative-infinity ((0 d)) variable NIL ## Variable
+
+DOUBLE-FLOAT-NEGATIVE-INFINITY names a constant variable:
+  Value: #.DOUBLE-FLOAT-NEGATIVE-INFINITY 0000000096) (double-float-positive-infinity ((0 d)) variable NIL ## Variable
+
+DOUBLE-FLOAT-POSITIVE-INFINITY names a constant variable:
+  Value: #.DOUBLE-FLOAT-POSITIVE-INFINITY 0000000097) (deprecation-condition-namespace ((0 d)) function (deprecation-condition-namespace condition) ## Function
+```lisp
+(deprecation-condition-namespace condition)
+``` 0000000098) (decimal-with-grouped-digits-width ((0 d)) function (decimal-with-grouped-digits-width value &key (comma-interval 3)) ## Function
+```lisp
+(decimal-with-grouped-digits-width value &key (comma-interval 3))
+``` 0000000099)))
+ 4: (SB-KERNEL:%MAP NIL #<FUNCTION (FLET SB-IMPL::F :IN SB-IMPL::VECTOR-MAP-INTO/SIMPLE-VECTOR) {7F318427E46B}> ((do ((0 d)) function, macro (do varlist endlist &body body) ## Function
+```lisp
+(do varlist endlist &body body)
+```
+DO ({(Var [Init] [Step])}*) (Test Exit-Form*) Declaration* Form*
+  Iteration construct. Each Var is initialized in parallel to the value of the
+  specified Init form. On subsequent iterations, the Vars are assigned the
+  value of the Step form (if any) in parallel. The Test is evaluated before
+  each evaluation of the body Forms. When the Test is true, the Exit-Forms
+  are evaluated as a PROGN, with the result being the value of the DO. A block
+  named NIL is established around the entire expansion, allowing RETURN to be
+  used as an alternate exit mechanism. 0000000000) (do* ((0 d)) function, macro (do* varlist endlist &body body) ## Function
+```lisp
+(do* varlist endlist &body body)
+```
+DO* ({(Var [Init] [Step])}*) (Test Exit-Form*) Declaration* Form*
+  Iteration construct. Each Var is initialized sequentially (like LET*) to the
+  value of the specified Init form. On subsequent iterations, the Vars are
+  sequentially assigned the value of the Step form (if any). The Test is
+  evaluated before each evaluation of the body Forms. When the Test is true,
+  the Exit-Forms are evaluated as a PROGN, with the result being the value
+  of the DO. A block named NIL is established around the entire expansion,
+  allowing RETURN to be used as an alternate exit mechanism. 0000000001) (dpb ((0 d)) function (dpb newbyte bytespec integer) ## Function
+```lisp
+(dpb newbyte bytespec integer)
+```
+Return new integer with newbyte in specified position, newbyte is right justified. 0000000002) (decf ((0 d)) function, macro (decf place &optional (delta 1)) ## Function
+```lisp
+(decf place &optional (delta 1))
+```
+The first argument is some location holding a number. This number is
+  decremented by the second argument, DELTA, which defaults to 1. 0000000003) (debug ((0 d))  NIL  0000000004) (defun ((0 d)) function, macro (defun name lambda-list &body body) ## Function
+```lisp
+(defun name lambda-list &body body)
+```
+Define a function at top level. 0000000005) (deref ((0 d)) function (deref alien &rest indices) ## Function
+```lisp
+(deref alien &rest indices)
+```
+Dereference an Alien pointer or array. If an array, the indices are used
+   as the indices of the array element to access. If a pointer, one index can
+   optionally be specified, giving the equivalent of C pointer arithmetic. 0000000006) (defvar ((0 d)) function, macro (defvar var &optional (val nil) (doc nil)) ## Function
+```lisp
+(defvar var &optional (val nil) (doc nil))
+```
+Define a special variable at top level. Declare the variable
+  SPECIAL and, optionally, initialize it. If the variable already has a
+  value, the old value is not clobbered. The third argument is an optional
+  documentation string for the variable. 0000000007) (delete ((0 d)) function (delete item sequence &rest args &key from-end (test #'eql) (test-not nil)
+        (start 0) (end nil) (count nil) (key nil)) ## Function
+```lisp
+(delete item sequence &rest args &key from-end (test #'eql) (test-not nil)
+        (start 0) (end nil) (count nil) (key nil))
+```
+Return a sequence formed by destructively removing the specified ITEM from
+  the given SEQUENCE. 0000000008) (dolist ((0 d)) function, macro (dolist (var list &optional (result nil)) &body body) ## Function
+```lisp
+(dolist (var list &optional (result nil)) &body body)
+``` 0000000009) (double ((0 d))  NIL  0000000010) (declaim ((0 d)) function, macro (declaim &rest
+         specs) ## Function
+```lisp
+(declaim &rest
+         specs)
+```
+DECLAIM Declaration*
+  Do a declaration or declarations for the global environment. 0000000011) (declare ((0 d))  NIL  0000000012) (defsetf ((0 d)) function, macro (defsetf access-fn &rest rest) ## Function
+```lisp
+(defsetf access-fn &rest rest)
+```
+Associates a SETF update function or macro with the specified access
+  function or macro. The format is complex. See the manual for details. 0000000013) (deftype ((0 d)) function, macro (deftype name lambda-list &body body) ## Function
+```lisp
+(deftype name lambda-list &body body)
+```
+Define a new type, with syntax like DEFMACRO. 0000000014) (dotimes ((0 d)) function, macro (dotimes (var count &optional (result nil)) &body body) ## Function
+```lisp
+(dotimes (var count &optional (result nil)) &body body)
+``` 0000000015) (dribble ((0 d)) function (dribble &optional pathname &key (if-exists append)) ## Function
+```lisp
+(dribble &optional pathname &key (if-exists append))
+```
+With a file name as an argument, dribble opens the file and sends a
+  record of further I/O to that file. Without an argument, it closes
+  the dribble file, and quits logging. 0000000016) (dissect: ((0 d)) package NIL ## Variable
+
+NIL names a constant variable:
+  Value: NIL 0000000017) (defclass ((0 d)) function, macro (defclass name direct-superclasses direct-slots &rest options) ## Function
+```lisp
+(defclass name direct-superclasses direct-slots &rest options)
+``` 0000000018) (defmacro ((0 d)) function, macro (defmacro name lambda-list &body body) ## Function
+```lisp
+(defmacro name lambda-list &body body)
+``` 0000000019) (describe ((0 d)) function (describe object &optional (stream-designator *standard-output*)) ## Function
+```lisp
+(describe object &optional (stream-designator *standard-output*))
+```
+Print a description of OBJECT to STREAM-DESIGNATOR. 0000000020) (defglobal ((0 d)) function, macro (defglobal name value &optional (doc nil)) ## Function
+```lisp
+(defglobal name value &optional (doc nil))
+```
+Defines NAME as a global variable that is always bound. VALUE is evaluated
+and assigned to NAME both at compile- and load-time, but only if NAME is not
+already bound.
+
+Global variables share their values between all threads, and cannot be
+locally bound, declared special, defined as constants, and neither bound
+nor defined as symbol macros.
+
+See also the declarations SB-EXT:GLOBAL and SB-EXT:ALWAYS-BOUND. 0000000021) (defmethod ((0 d)) function, macro (defmethod name &rest args) ## Function
+```lisp
+(defmethod name &rest args)
+``` 0000000022) (defstruct ((0 d)) function, macro (defstruct name-and-options &rest slot-descriptions) ## Function
+```lisp
+(defstruct name-and-options &rest slot-descriptions)
+```
+DEFSTRUCT {Name | (Name Option*)} [Documentation] {Slot | (Slot [Default] {Key Value}*)}
+   Define the structure type Name. Instances are created by MAKE-<name>,
+   which takes &KEY arguments allowing initial slot values to the specified.
+   A SETF'able function <name>-<slot> is defined for each slot to read and
+   write slot values. <name>-p is a type predicate.
+
+   Popular DEFSTRUCT options (see manual for others):
+
+   (:CONSTRUCTOR Name)
+   (:PREDICATE Name)
+       Specify the name for the constructor or predicate.
+
+   (:CONSTRUCTOR Name Lambda-List)
+       Specify the name and arguments for a BOA constructor
+       (which is more efficient when keyword syntax isn't necessary.)
+
+   (:INCLUDE Supertype Slot-Spec*)
+       Make this type a subtype of the structure type Supertype. The optional
+       Slot-Specs override inherited slot options.
+
+   Slot options:
+
+   :TYPE Type-Spec
+       Asserts that the value of this slot is always of the specified type.
+
+   :READ-ONLY {T | NIL}
+       If true, no setter function is defined for this slot. 0000000023) (delete-if ((0 d)) function (delete-if predicate sequence &rest args &key from-end (start 0) (key nil)
+           (end nil) (count nil)) ## Function
+```lisp
+(delete-if predicate sequence &rest args &key from-end (start 0) (key nil)
+           (end nil) (count nil))
+```
+Return a sequence formed by destructively removing the elements satisfying
+  the specified PREDICATE from the given SEQUENCE. 0000000024) (directory ((0 d)) function (directory pathspec &key (resolve-symlinks t)) ## Function
+```lisp
+(directory pathspec &key (resolve-symlinks t))
+```
+Return a list of PATHNAMEs, each the TRUENAME of a file matching PATHSPEC.
+
+Note that the interaction between this ANSI-specified TRUENAMEing and
+the semantics of the Unix filesystem (symbolic links..) means this
+function can sometimes return files which don't have the same
+directory as PATHSPEC.
+
+If :RESOLVE-SYMLINKS is NIL, don't resolve symbolic links in matching
+filenames. 0000000025) (*debug-io* ((1 d)) variable NIL ## Variable
+
+*DEBUG-IO* names a special variable:
+  Declared type: STREAM
+  Declared always-bound.
+  Value: #<TWO-WAY-STREAM :INPUT-STREAM #<MICROS/GRAY::SLIME-INPUT-STREAM {10045F08A3}> :OUTPUT-STREAM #<MICROS/GRAY::SLIME-OUTPUT-STREAM {1004702F83}> {100472FD33}>
+  Documentation:
+    interactive debugging stream 0000000026) (defgeneric ((0 d)) function, macro (defgeneric fun-name
+    lambda-list
+  &body
+  options) ## Function
+```lisp
+(defgeneric fun-name
+    lambda-list
+  &body
+  options)
+``` 0000000027) (defpackage ((0 d)) function, macro (defpackage package
+  &rest
+  options) ## Function
+```lisp
+(defpackage package
+  &rest
+  options)
+```
+Defines a new package called PACKAGE. Each of OPTIONS should be one of the
+   following: 
+    (USE {package-name}*)
+    (EXPORT {symbol-name}*)
+    (IMPORT-FROM <package-name> {symbol-name}*)
+    (SHADOW {symbol-name}*)
+    (SHADOWING-IMPORT-FROM <package-name> {symbol-name}*)
+    (LOCAL-NICKNAMES {(local-nickname actual-package-name)}*)
+    (LOCK boolean)
+    (IMPLEMENT {package-name}*)
+    (DOCUMENTATION doc-string)
+    (INTERN {symbol-name}*)
+    (SIZE <integer>)
+    (NICKNAMES {package-name}*)
+   All options except SIZE, LOCK, and :DOCUMENTATION can be used multiple
+   times. 0000000028) (deprecated ((0 d))  NIL ## Declaration
+
+DEPRECATED names an SBCL-specific declaration. 0000000029) (digit-char ((0 d)) function (digit-char weight &optional (radix 10)) ## Function
+```lisp
+(digit-char weight &optional (radix 10))
+```
+All arguments must be integers. Returns a character object that represents
+a digit of the given weight in the specified radix. Returns NIL if no such
+character exists. 0000000030) (do-symbols ((0 d)) function, macro (do-symbols (var &optional (package '*package*) result-form) &body body-decls) ## Function
+```lisp
+(do-symbols (var &optional (package '*package*) result-form) &body body-decls)
+```
+DO-SYMBOLS (VAR [PACKAGE [RESULT-FORM]]) {DECLARATION}* {TAG | FORM}*
+   Executes the FORMs at least once for each symbol accessible in the given
+   PACKAGE with VAR bound to the current symbol. 0000000031) (ed ((1 d)) function (ed &optional x) ## Function
+```lisp
+(ed &optional x)
+```
+Starts the editor (on a file or a function if named).  Functions
+from the list *ED-FUNCTIONS* are called in order with X as an argument
+until one of them returns non-NIL; these functions are responsible for
+signalling a FILE-ERROR to indicate failure to perform an operation on
+the file system. 0000000032) (declaration ((0 d))  NIL ## Declaration
+
+DECLARATION names a standard declaration. 0000000033) (defconstant ((0 d)) function, macro (defconstant name value &optional (doc nil)) ## Function
+```lisp
+(defconstant name value &optional (doc nil))
+```
+Define a global constant, saying that the value is constant and may be
+  compiled into code. If the variable already has a value, and this is not
+  EQL to the new value, the code is not portable (undefined behavior). The
+  third argument is an optional documentation string for the variable. 0000000034) (delete-file ((0 d)) function (delete-file file) ## Function
+```lisp
+(delete-file file)
+```
+Delete the specified FILE.
+
+If FILE is a stream, on Windows the stream is closed immediately. On Unix
+platforms the stream remains open, allowing IO to continue: the OS resources
+associated with the deleted file remain available till the stream is closed as
+per standard Unix unlink() behaviour. 0000000035) (denominator ((0 d)) function (denominator number) ## Function
+```lisp
+(denominator number)
+```
+Return the denominator of NUMBER, which must be rational. 0000000036) (disassemble ((0 d)) function (disassemble object &key (stream *standard-output*) (use-labels t)) ## Function
+```lisp
+(disassemble object &key (stream *standard-output*) (use-labels t))
+```
+Disassemble the compiled code associated with OBJECT, which can be a
+  function, a lambda expression, or a symbol with a function definition. If
+  it is not already compiled, the compiler is called to produce something to
+  disassemble. 0000000037) (decode-float ((0 d)) function (decode-float f) ## Function
+```lisp
+(decode-float f)
+```
+Return three values:
+   1) a floating-point number representing the significand. This is always
+      between 0.5 (inclusive) and 1.0 (exclusive).
+   2) an integer representing the exponent.
+   3) -1.0 or 1.0 (i.e. the sign of the argument.) 0000000038) (defparameter ((0 d)) function, macro (defparameter var val &optional (doc nil)) ## Function
+```lisp
+(defparameter var val &optional (doc nil))
+```
+Define a parameter that is not normally changed by the program,
+  but that may be changed without causing an error. Declare the
+  variable special and sets its value to VAL, overwriting any
+  previous value. The third argument is an optional documentation
+  string for the parameter. 0000000039) (digit-char-p ((0 d)) function (digit-char-p char &optional (radix 10)) ## Function
+```lisp
+(digit-char-p char &optional (radix 10))
+```
+If char is a digit in the specified radix, returns the fixnum for which
+that digit stands, else returns NIL. 0000000040) (double-float ((0 d)) type, class NIL ## Class
+
+DOUBLE-FLOAT names the built-in-class #<BUILT-IN-CLASS COMMON-LISP:DOUBLE-FLOAT>:
+  Class precedence-list: DOUBLE-FLOAT, FLOAT, REAL, NUMBER, T
+  Direct superclasses: FLOAT
+  No subclasses.
+  Sealed.
+  No direct slots.
+----------
+## Type
+
+DOUBLE-FLOAT names a primitive type-specifier:
+  Lambda-list: (&OPTIONAL (LOW (QUOTE *)) (HIGH (QUOTE *))) 0000000041) (delete-if-not ((0 d)) function (delete-if-not predicate sequence &rest args &key from-end (start 0) (end nil)
+               (key nil) (count nil)) ## Function
+```lisp
+(delete-if-not predicate sequence &rest args &key from-end (start 0) (end nil)
+               (key nil) (count nil))
+```
+Return a sequence formed by destructively removing the elements not
+  satisfying the specified PREDICATE from the given SEQUENCE. 0000000042) (deposit-field ((0 d)) function (deposit-field newbyte bytespec integer) ## Function
+```lisp
+(deposit-field newbyte bytespec integer)
+```
+Return new integer with newbyte in specified position, newbyte is not right justified. 0000000043) (documentation ((0 d)) function, generic-function (documentation object doc-type) ## Function
+```lisp
+(documentation object doc-type)
+```
+Return the documentation string of Doc-Type for X, or NIL if none
+exists. System doc-types are VARIABLE, FUNCTION, STRUCTURE, TYPE, SETF, and T.
+
+Function documentation is stored separately for function names and objects:
+DEFUN, LAMBDA, &co create function objects with the specified documentation
+strings.
+
+ (SETF (DOCUMENTATION NAME 'FUNCTION) STRING)
+
+sets the documentation string stored under the specified name, and
+
+ (SETF (DOCUMENTATION FUNC T) STRING)
+
+sets the documentation string stored in the function object.
+
+ (DOCUMENTATION NAME 'FUNCTION)
+
+returns the documentation stored under the function name if any, and
+falls back on the documentation in the function object if necessary. 0000000044) (delete-package ((0 d)) function (delete-package package-designator) ## Function
+```lisp
+(delete-package package-designator)
+```
+Delete the package designated by PACKAGE-DESIGNATOR from the package
+  system data structures. 0000000045) (do-all-symbols ((0 d)) function, macro (do-all-symbols (var &optional result-form) &body body-decls) ## Function
+```lisp
+(do-all-symbols (var &optional result-form) &body body-decls)
+```
+DO-ALL-SYMBOLS (VAR [RESULT-FORM]) {DECLARATION}* {TAG | FORM}*
+   Executes the FORMs once for each symbol in every package with VAR bound
+   to the current symbol. 0000000046) (dynamic-extent ((0 d))  NIL ## Declaration
+
+DYNAMIC-EXTENT names a standard declaration. 0000000047) (*debugger-hook* ((1 d)) variable NIL ## Variable
+
+*DEBUGGER-HOOK* names a special variable:
+  Declared type: (OR FUNCTION SYMBOL)
+  Declared always-bound.
+  Value: #<FUNCTION MICROS:SWANK-DEBUGGER-HOOK>
+  Documentation:
+    This is either NIL or a function of two arguments, a condition and the value
+       of *DEBUGGER-HOOK*. This function can either handle the condition or return
+       which causes the standard debugger to execute. The system passes the value
+       of this variable to the function because it binds *DEBUGGER-HOOK* to NIL
+       around the invocation. 0000000048) (describe-object ((0 d)) function, generic-function (describe-object object stream) ## Function
+```lisp
+(describe-object object stream)
+``` 0000000049) (define-condition ((0 d)) function, macro (define-condition name
+    (&rest parent-types)
+    (&rest slot-specs)
+  &body
+  options) ## Function
+```lisp
+(define-condition name
+    (&rest parent-types)
+    (&rest slot-specs)
+  &body
+  options)
+```
+DEFINE-CONDITION Name (Parent-Type*) (Slot-Spec*) Option*
+   Define NAME as a condition type. This new type inherits slots and its
+   report function from the specified PARENT-TYPEs. A slot spec is a list of:
+     (slot-name :reader <rname> :initarg <iname> {Option Value}*
+
+   The DEFINE-CLASS slot options :ALLOCATION, :INITFORM, [slot] :DOCUMENTATION
+   and :TYPE and the overall options :DEFAULT-INITARGS and
+   [type] :DOCUMENTATION are also allowed.
+
+   The :REPORT option is peculiar to DEFINE-CONDITION. Its argument is either
+   a string or a two-argument lambda or function name. If a function, the
+   function is called with the condition and stream to report the condition.
+   If a string, the string is printed.
+
+   Condition types are classes, but (as allowed by ANSI and not as described in
+   CLtL2) are neither STANDARD-OBJECTs nor STRUCTURE-OBJECTs. WITH-SLOTS and
+   SLOT-VALUE may not be used on condition objects. 0000000050) (delete-directory ((0 d)) function (delete-directory pathspec &key recursive) ## Function
+```lisp
+(delete-directory pathspec &key recursive)
+```
+Deletes the directory designated by PATHSPEC (a pathname designator).
+Returns the truename of the directory deleted.
+
+If RECURSIVE is false (the default), signals an error unless the directory is
+empty. If RECURSIVE is true, first deletes all files and subdirectories. If
+RECURSIVE is true and the directory contains symbolic links, the links are
+deleted, not the files and directories they point to.
+
+Signals an error if PATHSPEC designates a file or a symbolic link instead of a
+directory, or if the directory could not be deleted for any reason.
+
+Both
+
+   (DELETE-DIRECTORY "/tmp/foo")
+   (DELETE-DIRECTORY "/tmp/foo/")
+
+delete the "foo" subdirectory of "/tmp", or signal an error if it does not
+exist or if is a file or a symbolic link. 0000000051) (disable-debugger ((0 d)) function (disable-debugger) ## Function
+```lisp
+(disable-debugger)
+```
+When invoked, this function will turn off both the SBCL debugger
+and LDB (the low-level debugger).  See also ENABLE-DEBUGGER. 0000000052) (division-by-zero ((0 d)) type, class NIL ## Class
+
+DIVISION-BY-ZERO names the condition-class #<SB-PCL::CONDITION-CLASS COMMON-LISP:DIVISION-BY-ZERO>:
+  Class precedence-list: DIVISION-BY-ZERO, ARITHMETIC-ERROR, ERROR,
+                         SERIOUS-CONDITION, CONDITION, SB-PCL::SLOT-OBJECT, T
+  Direct superclasses: ARITHMETIC-ERROR
+  No subclasses.
+  No direct slots. 0000000053) (*debug-condition* ((1 d))  NIL  0000000054) (*debug-readtable* ((1 d)) variable NIL ## Variable
+
+*DEBUG-READTABLE* names a special variable:
+  Value: #<READTABLE {1000027AD3}>
+  Documentation:
+    *READTABLE* for the debugger 0000000055) (defconstant-uneql ((0 d)) type, class NIL ## Class
+
+DEFCONSTANT-UNEQL names the condition-class #<SB-PCL::CONDITION-CLASS SB-EXT:DEFCONSTANT-UNEQL>:
+  Class precedence-list: DEFCONSTANT-UNEQL, SB-INT:REFERENCE-CONDITION, ERROR,
+                         SERIOUS-CONDITION, CONDITION, SB-PCL::SLOT-OBJECT, T
+  Direct superclasses: SB-INT:REFERENCE-CONDITION, ERROR
+  No subclasses.
+  Direct slots:
+    SB-KERNEL::NAME
+      Initargs: :NAME
+      Readers: DEFCONSTANT-UNEQL-NAME
+    SB-KERNEL::OLD-VALUE
+      Initargs: :OLD-VALUE
+      Readers: DEFCONSTANT-UNEQL-OLD-VALUE
+    SB-KERNEL::NEW-VALUE
+      Initargs: :NEW-VALUE
+      Readers: DEFCONSTANT-UNEQL-NEW-VALUE 0000000056) (define-alien-type ((0 d)) function, macro (define-alien-type name type) ## Function
+```lisp
+(define-alien-type name type)
+```
+Define the alien type NAME to be equivalent to TYPE. Name may be NIL for
+   STRUCT and UNION types, in which case the name is taken from the type
+   specifier. 0000000057) (delete-duplicates ((0 d)) function (delete-duplicates sequence &rest args &key (test #'eql) (test-not nil)
+                   (start 0) (end nil) from-end (key nil)) ## Function
+```lisp
+(delete-duplicates sequence &rest args &key (test #'eql) (test-not nil)
+                   (start 0) (end nil) from-end (key nil))
+```
+The elements of SEQUENCE are examined, and if any two match, one is
+   discarded. The resulting sequence, which may be formed by destroying the
+   given sequence, is returned.
+
+   The :TEST-NOT argument is deprecated. 0000000058) (delete-file-error ((0 d)) type, class NIL ## Class
+
+DELETE-FILE-ERROR names the condition-class #<SB-PCL::CONDITION-CLASS SB-EXT:DELETE-FILE-ERROR>:
+  Class precedence-list: DELETE-FILE-ERROR, SB-INT:SIMPLE-FILE-ERROR,
+                         SIMPLE-CONDITION, FILE-ERROR, ERROR, SERIOUS-CONDITION,
+                         CONDITION, SB-PCL::SLOT-OBJECT, T
+  Direct superclasses: SB-INT:SIMPLE-FILE-ERROR
+  No subclasses.
+  No direct slots. 0000000059) (deprecation-error ((0 d)) function, type, class (deprecation-error software version namespace name replacements) ## Function
+```lisp
+(deprecation-error software version namespace name replacements)
+```
+----------
+## Class
+
+DEPRECATION-ERROR names the condition-class #<SB-PCL::CONDITION-CLASS SB-EXT:DEPRECATION-ERROR>:
+  Documentation:
+    This error is signaled at run-time when an attempt is made to use
+    a thing that is in :FINAL deprecation, i.e. call a function or access
+    a variable.
+  Class precedence-list: DEPRECATION-ERROR, ERROR, SERIOUS-CONDITION,
+                         DEPRECATION-CONDITION, SB-INT:REFERENCE-CONDITION,
+                         CONDITION, SB-PCL::SLOT-OBJECT, T
+  Direct superclasses: ERROR, DEPRECATION-CONDITION
+  No subclasses.
+  No direct slots. 0000000060) (destructuring-bind ((0 d)) function, macro (destructuring-bind lambda-list expression &body body) ## Function
+```lisp
+(destructuring-bind lambda-list expression &body body)
+```
+Bind the variables in LAMBDA-LIST to the corresponding values in the
+tree structure resulting from the evaluation of EXPRESSION. 0000000061) (dynamic-space-size ((0 d)) function (dynamic-space-size) ## Function
+```lisp
+(dynamic-space-size)
+```
+Size of the dynamic space in bytes. 0000000062) (*debug-help-string* ((1 d)) variable NIL ## Variable
+
+*DEBUG-HELP-STRING* names a global variable:
+  Declared always-bound.
+  Value: "The debug prompt is square brackets, with number(s) indicating the current
+  control stack level and, if you've entered the debugger recursively, how
+  deeply recursed you are.
+Any command -- including the name of a restart -- may be uniquely abbreviated.
+The debugger rebinds various special variables for controlling i/o, sometimes
+  to defaults (much like WITH-STANDARD-IO-SYNTAX does) and sometimes to
+  its own special values, based on SB-EXT:*DEBUG-PRINT-VARIABLE-ALIST*.
+Debug commands do not affect *, //, and similar variables, but evaluation in
+  the debug loop does affect these variables.
+SB-DEBUG:*FLUSH-DEBUG-ERRORS* controls whether errors at the debug prompt
+  drop you deeper into the debugger. The default NIL allows recursive entry
+  to debugger.
+
+Getting in and out of the debugger:
+  TOPLEVEL, TOP  exits debugger and returns to top level REPL
+  RESTART        invokes restart numbered as shown (prompt if not given).
+  ERROR          prints the error condition and restart cases.
+
+  The number of any restart, or its name, or a unique abbreviation for its
+   name, is a valid command, and is the same as using RESTART to invoke
+   that restart.
+
+Changing frames:
+  UP     up frame         DOWN     down frame
+  BOTTOM bottom frame     FRAME n  frame n (n=0 for top frame)
+
+Inspecting frames:
+  BACKTRACE [n]  shows n frames going down the stack.
+  LIST-LOCALS, L lists locals in current frame.
+  PRINT, P       displays function call for current frame.
+  SOURCE [n]     displays frame's source form with n levels of enclosing forms.
+
+Stepping:
+  START Selects the CONTINUE restart if one exists and starts
+        single-stepping. Single stepping affects only code compiled with
+        under high DEBUG optimization quality. See User Manual for details.
+  STEP  Steps into the current form.
+  NEXT  Steps over the current form.
+  OUT   Stops stepping temporarily, but resumes it when the topmost frame that
+        was stepped into returns.
+  STOP  Stops single-stepping.
+
+Function and macro commands:
+ (SB-DEBUG:ARG n)
+    Return the n'th argument in the current frame.
+ (SB-DEBUG:VAR string-or-symbol [id])
+    Returns the value of the specified variable in the current frame.
+
+Other commands:
+  RETURN expr
+    Return the values resulting from evaluation of expr from the
+    current frame, if this frame was compiled with a sufficiently high
+    DEBUG optimization quality.
+
+  RESTART-FRAME
+    Restart execution of the current frame, if this frame is for a
+    global function which was compiled with a sufficiently high
+    DEBUG optimization quality.
+
+  SLURP
+    Discard all pending input on *STANDARD-INPUT*. (This can be
+    useful when the debugger was invoked to handle an error in
+    deeply nested input syntax, and now the reader is confused.)" 0000000063) (define-modify-macro ((0 d)) function, macro (define-modify-macro name lambda-list function &optional doc-string) ## Function
+```lisp
+(define-modify-macro name lambda-list function &optional doc-string)
+```
+Creates a new read-modify-write macro like PUSH or INCF. 0000000064) (define-symbol-macro ((0 d)) function, macro (define-symbol-macro name expansion) ## Function
+```lisp
+(define-symbol-macro name expansion)
+``` 0000000065) (defined-type-name-p ((0 d)) function (defined-type-name-p name &optional env) ## Function
+```lisp
+(defined-type-name-p name &optional env)
+```
+Returns T if NAME is known to name a type specifier, otherwise NIL. 0000000066) (do-external-symbols ((0 d)) function, macro (do-external-symbols (var &optional (package '*package*) result-form)
+ &body
+ body-decls) ## Function
+```lisp
+(do-external-symbols (var &optional (package '*package*) result-form)
+ &body
+ body-decls)
+```
+DO-EXTERNAL-SYMBOLS (VAR [PACKAGE [RESULT-FORM]]) {DECL}* {TAG | FORM}*
+   Executes the FORMs once for each external symbol in the given PACKAGE with
+   VAR bound to the current symbol. 0000000067) (define-alien-routine ((0 d)) function, macro (define-alien-routine name result-type &rest args) ## Function
+```lisp
+(define-alien-routine name result-type &rest args)
+```
+DEFINE-ALIEN-ROUTINE Name Result-Type {(Arg-Name Arg-Type [Style])}*
+
+Define a foreign interface function for the routine with the specified NAME.
+Also automatically DECLAIM the FTYPE of the defined function.
+
+NAME may be either a string, a symbol, or a list of the form (string symbol).
+
+RETURN-TYPE is the alien type for the function return value. VOID may be
+used to specify a function with no result.
+
+The remaining forms specify individual arguments that are passed to the
+routine. ARG-NAME is a symbol that names the argument, primarily for
+documentation. ARG-TYPE is the C type of the argument. STYLE specifies the
+way that the argument is passed.
+
+:IN
+      An :IN argument is simply passed by value. The value to be passed is
+      obtained from argument(s) to the interface function. No values are
+      returned for :In arguments. This is the default mode.
+
+:OUT
+      The specified argument type must be a pointer to a fixed sized object.
+      A pointer to a preallocated object is passed to the routine, and the
+      the object is accessed on return, with the value being returned from
+      the interface function. :OUT and :IN-OUT cannot be used with pointers
+      to arrays, records or functions.
+
+:COPY
+      This is similar to :IN, except that the argument values are stored
+      on the stack, and a pointer to the object is passed instead of
+      the value itself.
+
+:IN-OUT
+      This is a combination of :OUT and :COPY. A pointer to the argument is
+      passed, with the object being initialized from the supplied argument
+      and the return value being determined by accessing the object on
+      return. 0000000068) (define-setf-expander ((0 d)) function, macro (define-setf-expander access-fn lambda-list &body body) ## Function
+```lisp
+(define-setf-expander access-fn lambda-list &body body)
+```
+Syntax like DEFMACRO, but creates a setf expander function. The body
+  of the definition must be a form that returns five appropriate values. 0000000069) (directory-namestring ((0 d)) function (directory-namestring pathname) ## Function
+```lisp
+(directory-namestring pathname)
+```
+Return a string representation of the directory in PATHNAME. 0000000070) (double-float-epsilon ((0 d)) variable NIL ## Variable
+
+DOUBLE-FLOAT-EPSILON names a constant variable:
+  Value: 1.1102230246251568d-16 0000000071) (decode-universal-time ((0 d)) function (decode-universal-time universal-time &optional time-zone) ## Function
+```lisp
+(decode-universal-time universal-time &optional time-zone)
+```
+Converts a universal-time to decoded time format returning the following
+   nine values: second, minute, hour, date, month, year, day of week (0 =
+   Monday), T (daylight savings time) or NIL (standard time), and timezone.
+   Completely ignores daylight-savings-time when time-zone is supplied. 0000000072) (define-alien-callable ((0 d)) function, macro (define-alien-callable name
+    result-type
+    typed-lambda-list
+  &body
+  body) ## Function
+```lisp
+(define-alien-callable name
+    result-type
+    typed-lambda-list
+  &body
+  body)
+```
+Define an alien callable function in the alien callable namespace with result
+type RESULT-TYPE and with lambda list specifying the alien types of the
+arguments. 0000000073) (define-alien-variable ((0 d)) function, macro (define-alien-variable name type) ## Function
+```lisp
+(define-alien-variable name type)
+```
+Define NAME as an external alien variable of type TYPE. NAME should
+be a list of a string holding the alien name and a symbol to use as
+the Lisp name. If NAME is just a symbol or string, then the other name
+is guessed from the one supplied. 0000000074) (define-compiler-macro ((0 d)) function, macro (define-compiler-macro name
+    lambda-list
+  &body
+  body) ## Function
+```lisp
+(define-compiler-macro name
+    lambda-list
+  &body
+  body)
+```
+Define a compiler-macro for NAME. 0000000075) (define-source-context ((0 d)) function, macro (define-source-context name
+    lambda-list
+  &body
+  body) ## Function
+```lisp
+(define-source-context name
+    lambda-list
+  &body
+  body)
+```
+DEFINE-SOURCE-CONTEXT Name Lambda-List Form*
+   This macro defines how to extract an abbreviated source context from the
+   Named form when it appears in the compiler input. Lambda-List is a DEFMACRO
+   style lambda-list used to parse the arguments. The Body should return a
+   list of subforms suitable for a "~{~S ~}" format string. 0000000076) (deprecation-condition ((0 d)) type, class NIL ## Class
+
+DEPRECATION-CONDITION names the condition-class #<SB-PCL::CONDITION-CLASS SB-EXT:DEPRECATION-CONDITION>:
+  Documentation:
+    Superclass for deprecation-related error and warning
+    conditions.
+  Class precedence-list: DEPRECATION-CONDITION, SB-INT:REFERENCE-CONDITION,
+                         CONDITION, SB-PCL::SLOT-OBJECT, T
+  Direct superclasses: SB-INT:REFERENCE-CONDITION
+  Direct subclasses: DEPRECATION-ERROR, FINAL-DEPRECATION-WARNING,
+                     LATE-DEPRECATION-WARNING, EARLY-DEPRECATION-WARNING
+  Direct slots:
+    SB-KERNEL::NAMESPACE
+      Initargs: :NAMESPACE
+      Readers: DEPRECATION-CONDITION-NAMESPACE
+    SB-KERNEL::NAME
+      Initargs: :NAME
+      Readers: DEPRECATION-CONDITION-NAME
+    SB-KERNEL::REPLACEMENTS
+      Initargs: :REPLACEMENTS
+      Readers: DEPRECATION-CONDITION-REPLACEMENTS
+    SB-KERNEL::SOFTWARE
+      Initargs: :SOFTWARE
+      Readers: DEPRECATION-CONDITION-SOFTWARE
+    SB-KERNEL::VERSION
+      Initargs: :VERSION
+      Readers: DEPRECATION-CONDITION-VERSION
+    SB-KERNEL::RUNTIME-ERROR
+      Initargs: :RUNTIME-ERROR
+      Initform: 'NIL
+      Readers: DEPRECATION-CONDITION-RUNTIME-ERROR 0000000077) (disable-package-locks ((0 d))  NIL ## Declaration
+
+DISABLE-PACKAGE-LOCKS names an SBCL-specific declaration. 0000000078) (*disassemble-annotate* ((1 d)) variable NIL ## Variable
+
+*DISASSEMBLE-ANNOTATE* names a special variable:
+  Value: NIL
+  Documentation:
+    Annotate DISASSEMBLE output with source code. 0000000079) (defconstant-uneql-name ((0 d)) function (defconstant-uneql-name condition) ## Function
+```lisp
+(defconstant-uneql-name condition)
+``` 0000000080) (define-hash-table-test ((0 d)) function, macro (define-hash-table-test name hash-function) ## Function
+```lisp
+(define-hash-table-test name hash-function)
+```
+Defines NAME as a new kind of hash table test for use with the :TEST
+argument to MAKE-HASH-TABLE, and associates a default HASH-FUNCTION with it.
+
+NAME must be a symbol naming a global two argument equivalence predicate.
+Afterwards both 'NAME and #'NAME can be used with :TEST argument. In both
+cases HASH-TABLE-TEST will return the symbol NAME.
+
+HASH-FUNCTION must be a symbol naming a global hash function consistent with
+the predicate, or be a LAMBDA form implementing one in the current lexical
+environment. The hash function must compute the same hash code for any two
+objects for which NAME returns true, and subsequent calls with already hashed
+objects must always return the same hash code.
+
+Note: The :HASH-FUNCTION keyword argument to MAKE-HASH-TABLE can be used to
+override the specified default hash-function.
+
+Attempting to define NAME in a locked package as hash-table test causes a
+package lock violation.
+
+Examples:
+
+  ;;; 1.
+
+  ;; We want to use objects of type FOO as keys (by their
+  ;; names.) EQUALP would work, but would make the names
+  ;; case-insensitive -- which we don't want.
+  (defstruct foo (name nil :type (or null string)))
+
+  ;; Define an equivalence test function and a hash function.
+  (defun foo-name= (f1 f2) (equal (foo-name f1) (foo-name f2)))
+  (defun sxhash-foo-name (f) (sxhash (foo-name f)))
+
+  (define-hash-table-test foo-name= sxhash-foo-name)
+
+  ;; #'foo-name would work too.
+  (defun make-foo-table () (make-hash-table :test 'foo-name=))
+
+  ;;; 2.
+
+  (defun == (x y) (= x y))
+
+  (define-hash-table-test ==
+    (lambda (x)
+      ;; Hash codes must be consistent with test, so
+      ;; not (SXHASH X), since
+      ;;   (= 1 1.0)                   => T
+      ;;   (= (SXHASH 1) (SXHASH 1.0)) => NIL
+      ;; Note: this doesn't deal with complex numbers or
+      ;; bignums too large to represent as double floats.
+      (sxhash (coerce x 'double-float))))
+
+  ;; #'== would work too
+  (defun make-number-table () (make-hash-table :test '==)) 0000000081) (*debug-beginner-help-p* ((1 d)) variable NIL ## Variable
+
+*DEBUG-BEGINNER-HELP-P* names a special variable:
+  Value: T
+  Documentation:
+    Should the debugger display beginner-oriented help messages? 0000000082) (*derive-function-types* ((1 d)) variable NIL ## Variable
+
+*DERIVE-FUNCTION-TYPES* names a special variable:
+  Value: NIL
+  Documentation:
+    Should the compiler assume that function types will never change,
+      so that it can use type information inferred from current definitions
+      to optimize code which uses those definitions? Setting this true
+      gives non-ANSI, early-CMU-CL behavior. It can be useful for improving
+      the efficiency of stable code. 0000000083) (define-load-time-global ((0 d)) function, macro (define-load-time-global name value &optional (doc nil)) ## Function
+```lisp
+(define-load-time-global name value &optional (doc nil))
+```
+Defines NAME as a global variable that is always bound. VALUE is evaluated
+and assigned to NAME at load-time, but only if NAME is not already bound.
+
+Attempts to read NAME at compile-time will signal an UNBOUND-VARIABLE error
+unless it has otherwise been assigned a value.
+
+See also DEFGLOBAL which assigns the VALUE at compile-time too. 0000000084) (describe-compiler-policy ((0 d)) function (describe-compiler-policy &optional spec) ## Function
+```lisp
+(describe-compiler-policy &optional spec)
+```
+Print all global optimization settings, augmented by SPEC. 0000000085) (*default-external-format* ((1 d)) variable NIL ## Variable
+
+*DEFAULT-EXTERNAL-FORMAT* names a special variable:
+  Value: :UTF-8 0000000086) (define-method-combination ((0 d)) function, macro (define-method-combination name
+  . args) ## Function
+```lisp
+(define-method-combination name
+  . args)
+``` 0000000087) (deprecation-condition-name ((0 d)) function (deprecation-condition-name condition) ## Function
+```lisp
+(deprecation-condition-name condition)
+``` 0000000088) (*default-pathname-defaults* ((1 d)) variable NIL ## Variable
+
+*DEFAULT-PATHNAME-DEFAULTS* names a special variable:
+  Declared type: PATHNAME
+  Declared always-bound.
+  Value: #P"/home/runner/Lisp-sbcl/" 0000000089) (defconstant-uneql-new-value ((0 d)) function (defconstant-uneql-new-value condition) ## Function
+```lisp
+(defconstant-uneql-new-value condition)
+``` 0000000090) (defconstant-uneql-old-value ((0 d)) function (defconstant-uneql-old-value condition) ## Function
+```lisp
+(defconstant-uneql-old-value condition)
+``` 0000000091) (*debug-print-variable-alist* ((1 d)) variable NIL ## Variable
+
+*DEBUG-PRINT-VARIABLE-ALIST* names a special variable:
+  Value: NIL
+  Documentation:
+    an association list describing new bindings for special variables
+    to be used within the debugger. Eg.
+    
+     ((*PRINT-LENGTH* . 10) (*PRINT-LEVEL* . 6) (*PRINT-PRETTY* . NIL))
+    
+    The variables in the CAR positions are bound to the values in the CDR
+    during the execution of some debug commands. When evaluating arbitrary
+    expressions in the debugger, the normal values of the printer control
+    variables are in effect.
+    
+    Initially empty, *DEBUG-PRINT-VARIABLE-ALIST* is typically used to
+    provide bindings for printer control variables. 0000000092) (deprecation-condition-version ((0 d)) function (deprecation-condition-version condition) ## Function
+```lisp
+(deprecation-condition-version condition)
+``` 0000000093) (double-float-negative-epsilon ((0 d)) variable NIL ## Variable
+
+DOUBLE-FLOAT-NEGATIVE-EPSILON names a constant variable:
+  Value: 5.551115123125784d-17 0000000094) (deprecation-condition-software ((0 d)) function (deprecation-condition-software condition) ## Function
+```lisp
+(deprecation-condition-software condition)
+``` 0000000095) (double-float-negative-infinity ((0 d)) variable NIL ## Variable
+
+DOUBLE-FLOAT-NEGATIVE-INFINITY names a constant variable:
+  Value: #.DOUBLE-FLOAT-NEGATIVE-INFINITY 0000000096) (double-float-positive-infinity ((0 d)) variable NIL ## Variable
+
+DOUBLE-FLOAT-POSITIVE-INFINITY names a constant variable:
+  Value: #.DOUBLE-FLOAT-POSITIVE-INFINITY 0000000097) (deprecation-condition-namespace ((0 d)) function (deprecation-condition-namespace condition) ## Function
+```lisp
+(deprecation-condition-namespace condition)
+``` 0000000098) (decimal-with-grouped-digits-width ((0 d)) function (decimal-with-grouped-digits-width value &key (comma-interval 3)) ## Function
+```lisp
+(decimal-with-grouped-digits-width value &key (comma-interval 3))
+``` 0000000099)))
+ 5: (SB-IMPL::VECTOR-MAP-INTO/SIMPLE-VECTOR #(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0) 0 100 #<FUNCTION (LAMBDA (LEM-LANGUAGE-SERVER::COMPLETED-ITEM) :IN LEM-LANGUAGE-SERVER::CALL-LSP-METHOD-AUX) {7F318427E52B}> (((do ((0 d)) function, macro (do varlist endlist &body body) ## Function
+```lisp
+(do varlist endlist &body body)
+```
+DO ({(Var [Init] [Step])}*) (Test Exit-Form*) Declaration* Form*
+  Iteration construct. Each Var is initialized in parallel to the value of the
+  specified Init form. On subsequent iterations, the Vars are assigned the
+  value of the Step form (if any) in parallel. The Test is evaluated before
+  each evaluation of the body Forms. When the Test is true, the Exit-Forms
+  are evaluated as a PROGN, with the result being the value of the DO. A block
+  named NIL is established around the entire expansion, allowing RETURN to be
+  used as an alternate exit mechanism. 0000000000) (do* ((0 d)) function, macro (do* varlist endlist &body body) ## Function
+```lisp
+(do* varlist endlist &body body)
+```
+DO* ({(Var [Init] [Step])}*) (Test Exit-Form*) Declaration* Form*
+  Iteration construct. Each Var is initialized sequentially (like LET*) to the
+  value of the specified Init form. On subsequent iterations, the Vars are
+  sequentially assigned the value of the Step form (if any). The Test is
+  evaluated before each evaluation of the body Forms. When the Test is true,
+  the Exit-Forms are evaluated as a PROGN, with the result being the value
+  of the DO. A block named NIL is established around the entire expansion,
+  allowing RETURN to be used as an alternate exit mechanism. 0000000001) (dpb ((0 d)) function (dpb newbyte bytespec integer) ## Function
+```lisp
+(dpb newbyte bytespec integer)
+```
+Return new integer with newbyte in specified position, newbyte is right justified. 0000000002) (decf ((0 d)) function, macro (decf place &optional (delta 1)) ## Function
+```lisp
+(decf place &optional (delta 1))
+```
+The first argument is some location holding a number. This number is
+  decremented by the second argument, DELTA, which defaults to 1. 0000000003) (debug ((0 d))  NIL  0000000004) (defun ((0 d)) function, macro (defun name lambda-list &body body) ## Function
+```lisp
+(defun name lambda-list &body body)
+```
+Define a function at top level. 0000000005) (deref ((0 d)) function (deref alien &rest indices) ## Function
+```lisp
+(deref alien &rest indices)
+```
+Dereference an Alien pointer or array. If an array, the indices are used
+   as the indices of the array element to access. If a pointer, one index can
+   optionally be specified, giving the equivalent of C pointer arithmetic. 0000000006) (defvar ((0 d)) function, macro (defvar var &optional (val nil) (doc nil)) ## Function
+```lisp
+(defvar var &optional (val nil) (doc nil))
+```
+Define a special variable at top level. Declare the variable
+  SPECIAL and, optionally, initialize it. If the variable already has a
+  value, the old value is not clobbered. The third argument is an optional
+  documentation string for the variable. 0000000007) (delete ((0 d)) function (delete item sequence &rest args &key from-end (test #'eql) (test-not nil)
+        (start 0) (end nil) (count nil) (key nil)) ## Function
+```lisp
+(delete item sequence &rest args &key from-end (test #'eql) (test-not nil)
+        (start 0) (end nil) (count nil) (key nil))
+```
+Return a sequence formed by destructively removing the specified ITEM from
+  the given SEQUENCE. 0000000008) (dolist ((0 d)) function, macro (dolist (var list &optional (result nil)) &body body) ## Function
+```lisp
+(dolist (var list &optional (result nil)) &body body)
+``` 0000000009) (double ((0 d))  NIL  0000000010) (declaim ((0 d)) function, macro (declaim &rest
+         specs) ## Function
+```lisp
+(declaim &rest
+         specs)
+```
+DECLAIM Declaration*
+  Do a declaration or declarations for the global environment. 0000000011) (declare ((0 d))  NIL  0000000012) (defsetf ((0 d)) function, macro (defsetf access-fn &rest rest) ## Function
+```lisp
+(defsetf access-fn &rest rest)
+```
+Associates a SETF update function or macro with the specified access
+  function or macro. The format is complex. See the manual for details. 0000000013) (deftype ((0 d)) function, macro (deftype name lambda-list &body body) ## Function
+```lisp
+(deftype name lambda-list &body body)
+```
+Define a new type, with syntax like DEFMACRO. 0000000014) (dotimes ((0 d)) function, macro (dotimes (var count &optional (result nil)) &body body) ## Function
+```lisp
+(dotimes (var count &optional (result nil)) &body body)
+``` 0000000015) (dribble ((0 d)) function (dribble &optional pathname &key (if-exists append)) ## Function
+```lisp
+(dribble &optional pathname &key (if-exists append))
+```
+With a file name as an argument, dribble opens the file and sends a
+  record of further I/O to that file. Without an argument, it closes
+  the dribble file, and quits logging. 0000000016) (dissect: ((0 d)) package NIL ## Variable
+
+NIL names a constant variable:
+  Value: NIL 0000000017) (defclass ((0 d)) function, macro (defclass name direct-superclasses direct-slots &rest options) ## Function
+```lisp
+(defclass name direct-superclasses direct-slots &rest options)
+``` 0000000018) (defmacro ((0 d)) function, macro (defmacro name lambda-list &body body) ## Function
+```lisp
+(defmacro name lambda-list &body body)
+``` 0000000019) (describe ((0 d)) function (describe object &optional (stream-designator *standard-output*)) ## Function
+```lisp
+(describe object &optional (stream-designator *standard-output*))
+```
+Print a description of OBJECT to STREAM-DESIGNATOR. 0000000020) (defglobal ((0 d)) function, macro (defglobal name value &optional (doc nil)) ## Function
+```lisp
+(defglobal name value &optional (doc nil))
+```
+Defines NAME as a global variable that is always bound. VALUE is evaluated
+and assigned to NAME both at compile- and load-time, but only if NAME is not
+already bound.
+
+Global variables share their values between all threads, and cannot be
+locally bound, declared special, defined as constants, and neither bound
+nor defined as symbol macros.
+
+See also the declarations SB-EXT:GLOBAL and SB-EXT:ALWAYS-BOUND. 0000000021) (defmethod ((0 d)) function, macro (defmethod name &rest args) ## Function
+```lisp
+(defmethod name &rest args)
+``` 0000000022) (defstruct ((0 d)) function, macro (defstruct name-and-options &rest slot-descriptions) ## Function
+```lisp
+(defstruct name-and-options &rest slot-descriptions)
+```
+DEFSTRUCT {Name | (Name Option*)} [Documentation] {Slot | (Slot [Default] {Key Value}*)}
+   Define the structure type Name. Instances are created by MAKE-<name>,
+   which takes &KEY arguments allowing initial slot values to the specified.
+   A SETF'able function <name>-<slot> is defined for each slot to read and
+   write slot values. <name>-p is a type predicate.
+
+   Popular DEFSTRUCT options (see manual for others):
+
+   (:CONSTRUCTOR Name)
+   (:PREDICATE Name)
+       Specify the name for the constructor or predicate.
+
+   (:CONSTRUCTOR Name Lambda-List)
+       Specify the name and arguments for a BOA constructor
+       (which is more efficient when keyword syntax isn't necessary.)
+
+   (:INCLUDE Supertype Slot-Spec*)
+       Make this type a subtype of the structure type Supertype. The optional
+       Slot-Specs override inherited slot options.
+
+   Slot options:
+
+   :TYPE Type-Spec
+       Asserts that the value of this slot is always of the specified type.
+
+   :READ-ONLY {T | NIL}
+       If true, no setter function is defined for this slot. 0000000023) (delete-if ((0 d)) function (delete-if predicate sequence &rest args &key from-end (start 0) (key nil)
+           (end nil) (count nil)) ## Function
+```lisp
+(delete-if predicate sequence &rest args &key from-end (start 0) (key nil)
+           (end nil) (count nil))
+```
+Return a sequence formed by destructively removing the elements satisfying
+  the specified PREDICATE from the given SEQUENCE. 0000000024) (directory ((0 d)) function (directory pathspec &key (resolve-symlinks t)) ## Function
+```lisp
+(directory pathspec &key (resolve-symlinks t))
+```
+Return a list of PATHNAMEs, each the TRUENAME of a file matching PATHSPEC.
+
+Note that the interaction between this ANSI-specified TRUENAMEing and
+the semantics of the Unix filesystem (symbolic links..) means this
+function can sometimes return files which don't have the same
+directory as PATHSPEC.
+
+If :RESOLVE-SYMLINKS is NIL, don't resolve symbolic links in matching
+filenames. 0000000025) (*debug-io* ((1 d)) variable NIL ## Variable
+
+*DEBUG-IO* names a special variable:
+  Declared type: STREAM
+  Declared always-bound.
+  Value: #<TWO-WAY-STREAM :INPUT-STREAM #<MICROS/GRAY::SLIME-INPUT-STREAM {10045F08A3}> :OUTPUT-STREAM #<MICROS/GRAY::SLIME-OUTPUT-STREAM {1004702F83}> {100472FD33}>
+  Documentation:
+    interactive debugging stream 0000000026) (defgeneric ((0 d)) function, macro (defgeneric fun-name
+    lambda-list
+  &body
+  options) ## Function
+```lisp
+(defgeneric fun-name
+    lambda-list
+  &body
+  options)
+``` 0000000027) (defpackage ((0 d)) function, macro (defpackage package
+  &rest
+  options) ## Function
+```lisp
+(defpackage package
+  &rest
+  options)
+```
+Defines a new package called PACKAGE. Each of OPTIONS should be one of the
+   following: 
+    (USE {package-name}*)
+    (EXPORT {symbol-name}*)
+    (IMPORT-FROM <package-name> {symbol-name}*)
+    (SHADOW {symbol-name}*)
+    (SHADOWING-IMPORT-FROM <package-name> {symbol-name}*)
+    (LOCAL-NICKNAMES {(local-nickname actual-package-name)}*)
+    (LOCK boolean)
+    (IMPLEMENT {package-name}*)
+    (DOCUMENTATION doc-string)
+    (INTERN {symbol-name}*)
+    (SIZE <integer>)
+    (NICKNAMES {package-name}*)
+   All options except SIZE, LOCK, and :DOCUMENTATION can be used multiple
+   times. 0000000028) (deprecated ((0 d))  NIL ## Declaration
+
+DEPRECATED names an SBCL-specific declaration. 0000000029) (digit-char ((0 d)) function (digit-char weight &optional (radix 10)) ## Function
+```lisp
+(digit-char weight &optional (radix 10))
+```
+All arguments must be integers. Returns a character object that represents
+a digit of the given weight in the specified radix. Returns NIL if no such
+character exists. 0000000030) (do-symbols ((0 d)) function, macro (do-symbols (var &optional (package '*package*) result-form) &body body-decls) ## Function
+```lisp
+(do-symbols (var &optional (package '*package*) result-form) &body body-decls)
+```
+DO-SYMBOLS (VAR [PACKAGE [RESULT-FORM]]) {DECLARATION}* {TAG | FORM}*
+   Executes the FORMs at least once for each symbol accessible in the given
+   PACKAGE with VAR bound to the current symbol. 0000000031) (ed ((1 d)) function (ed &optional x) ## Function
+```lisp
+(ed &optional x)
+```
+Starts the editor (on a file or a function if named).  Functions
+from the list *ED-FUNCTIONS* are called in order with X as an argument
+until one of them returns non-NIL; these functions are responsible for
+signalling a FILE-ERROR to indicate failure to perform an operation on
+the file system. 0000000032) (declaration ((0 d))  NIL ## Declaration
+
+DECLARATION names a standard declaration. 0000000033) (defconstant ((0 d)) function, macro (defconstant name value &optional (doc nil)) ## Function
+```lisp
+(defconstant name value &optional (doc nil))
+```
+Define a global constant, saying that the value is constant and may be
+  compiled into code. If the variable already has a value, and this is not
+  EQL to the new value, the code is not portable (undefined behavior). The
+  third argument is an optional documentation string for the variable. 0000000034) (delete-file ((0 d)) function (delete-file file) ## Function
+```lisp
+(delete-file file)
+```
+Delete the specified FILE.
+
+If FILE is a stream, on Windows the stream is closed immediately. On Unix
+platforms the stream remains open, allowing IO to continue: the OS resources
+associated with the deleted file remain available till the stream is closed as
+per standard Unix unlink() behaviour. 0000000035) (denominator ((0 d)) function (denominator number) ## Function
+```lisp
+(denominator number)
+```
+Return the denominator of NUMBER, which must be rational. 0000000036) (disassemble ((0 d)) function (disassemble object &key (stream *standard-output*) (use-labels t)) ## Function
+```lisp
+(disassemble object &key (stream *standard-output*) (use-labels t))
+```
+Disassemble the compiled code associated with OBJECT, which can be a
+  function, a lambda expression, or a symbol with a function definition. If
+  it is not already compiled, the compiler is called to produce something to
+  disassemble. 0000000037) (decode-float ((0 d)) function (decode-float f) ## Function
+```lisp
+(decode-float f)
+```
+Return three values:
+   1) a floating-point number representing the significand. This is always
+      between 0.5 (inclusive) and 1.0 (exclusive).
+   2) an integer representing the exponent.
+   3) -1.0 or 1.0 (i.e. the sign of the argument.) 0000000038) (defparameter ((0 d)) function, macro (defparameter var val &optional (doc nil)) ## Function
+```lisp
+(defparameter var val &optional (doc nil))
+```
+Define a parameter that is not normally changed by the program,
+  but that may be changed without causing an error. Declare the
+  variable special and sets its value to VAL, overwriting any
+  previous value. The third argument is an optional documentation
+  string for the parameter. 0000000039) (digit-char-p ((0 d)) function (digit-char-p char &optional (radix 10)) ## Function
+```lisp
+(digit-char-p char &optional (radix 10))
+```
+If char is a digit in the specified radix, returns the fixnum for which
+that digit stands, else returns NIL. 0000000040) (double-float ((0 d)) type, class NIL ## Class
+
+DOUBLE-FLOAT names the built-in-class #<BUILT-IN-CLASS COMMON-LISP:DOUBLE-FLOAT>:
+  Class precedence-list: DOUBLE-FLOAT, FLOAT, REAL, NUMBER, T
+  Direct superclasses: FLOAT
+  No subclasses.
+  Sealed.
+  No direct slots.
+----------
+## Type
+
+DOUBLE-FLOAT names a primitive type-specifier:
+  Lambda-list: (&OPTIONAL (LOW (QUOTE *)) (HIGH (QUOTE *))) 0000000041) (delete-if-not ((0 d)) function (delete-if-not predicate sequence &rest args &key from-end (start 0) (end nil)
+               (key nil) (count nil)) ## Function
+```lisp
+(delete-if-not predicate sequence &rest args &key from-end (start 0) (end nil)
+               (key nil) (count nil))
+```
+Return a sequence formed by destructively removing the elements not
+  satisfying the specified PREDICATE from the given SEQUENCE. 0000000042) (deposit-field ((0 d)) function (deposit-field newbyte bytespec integer) ## Function
+```lisp
+(deposit-field newbyte bytespec integer)
+```
+Return new integer with newbyte in specified position, newbyte is not right justified. 0000000043) (documentation ((0 d)) function, generic-function (documentation object doc-type) ## Function
+```lisp
+(documentation object doc-type)
+```
+Return the documentation string of Doc-Type for X, or NIL if none
+exists. System doc-types are VARIABLE, FUNCTION, STRUCTURE, TYPE, SETF, and T.
+
+Function documentation is stored separately for function names and objects:
+DEFUN, LAMBDA, &co create function objects with the specified documentation
+strings.
+
+ (SETF (DOCUMENTATION NAME 'FUNCTION) STRING)
+
+sets the documentation string stored under the specified name, and
+
+ (SETF (DOCUMENTATION FUNC T) STRING)
+
+sets the documentation string stored in the function object.
+
+ (DOCUMENTATION NAME 'FUNCTION)
+
+returns the documentation stored under the function name if any, and
+falls back on the documentation in the function object if necessary. 0000000044) (delete-package ((0 d)) function (delete-package package-designator) ## Function
+```lisp
+(delete-package package-designator)
+```
+Delete the package designated by PACKAGE-DESIGNATOR from the package
+  system data structures. 0000000045) (do-all-symbols ((0 d)) function, macro (do-all-symbols (var &optional result-form) &body body-decls) ## Function
+```lisp
+(do-all-symbols (var &optional result-form) &body body-decls)
+```
+DO-ALL-SYMBOLS (VAR [RESULT-FORM]) {DECLARATION}* {TAG | FORM}*
+   Executes the FORMs once for each symbol in every package with VAR bound
+   to the current symbol. 0000000046) (dynamic-extent ((0 d))  NIL ## Declaration
+
+DYNAMIC-EXTENT names a standard declaration. 0000000047) (*debugger-hook* ((1 d)) variable NIL ## Variable
+
+*DEBUGGER-HOOK* names a special variable:
+  Declared type: (OR FUNCTION SYMBOL)
+  Declared always-bound.
+  Value: #<FUNCTION MICROS:SWANK-DEBUGGER-HOOK>
+  Documentation:
+    This is either NIL or a function of two arguments, a condition and the value
+       of *DEBUGGER-HOOK*. This function can either handle the condition or return
+       which causes the standard debugger to execute. The system passes the value
+       of this variable to the function because it binds *DEBUGGER-HOOK* to NIL
+       around the invocation. 0000000048) (describe-object ((0 d)) function, generic-function (describe-object object stream) ## Function
+```lisp
+(describe-object object stream)
+``` 0000000049) (define-condition ((0 d)) function, macro (define-condition name
+    (&rest parent-types)
+    (&rest slot-specs)
+  &body
+  options) ## Function
+```lisp
+(define-condition name
+    (&rest parent-types)
+    (&rest slot-specs)
+  &body
+  options)
+```
+DEFINE-CONDITION Name (Parent-Type*) (Slot-Spec*) Option*
+   Define NAME as a condition type. This new type inherits slots and its
+   report function from the specified PARENT-TYPEs. A slot spec is a list of:
+     (slot-name :reader <rname> :initarg <iname> {Option Value}*
+
+   The DEFINE-CLASS slot options :ALLOCATION, :INITFORM, [slot] :DOCUMENTATION
+   and :TYPE and the overall options :DEFAULT-INITARGS and
+   [type] :DOCUMENTATION are also allowed.
+
+   The :REPORT option is peculiar to DEFINE-CONDITION. Its argument is either
+   a string or a two-argument lambda or function name. If a function, the
+   function is called with the condition and stream to report the condition.
+   If a string, the string is printed.
+
+   Condition types are classes, but (as allowed by ANSI and not as described in
+   CLtL2) are neither STANDARD-OBJECTs nor STRUCTURE-OBJECTs. WITH-SLOTS and
+   SLOT-VALUE may not be used on condition objects. 0000000050) (delete-directory ((0 d)) function (delete-directory pathspec &key recursive) ## Function
+```lisp
+(delete-directory pathspec &key recursive)
+```
+Deletes the directory designated by PATHSPEC (a pathname designator).
+Returns the truename of the directory deleted.
+
+If RECURSIVE is false (the default), signals an error unless the directory is
+empty. If RECURSIVE is true, first deletes all files and subdirectories. If
+RECURSIVE is true and the directory contains symbolic links, the links are
+deleted, not the files and directories they point to.
+
+Signals an error if PATHSPEC designates a file or a symbolic link instead of a
+directory, or if the directory could not be deleted for any reason.
+
+Both
+
+   (DELETE-DIRECTORY "/tmp/foo")
+   (DELETE-DIRECTORY "/tmp/foo/")
+
+delete the "foo" subdirectory of "/tmp", or signal an error if it does not
+exist or if is a file or a symbolic link. 0000000051) (disable-debugger ((0 d)) function (disable-debugger) ## Function
+```lisp
+(disable-debugger)
+```
+When invoked, this function will turn off both the SBCL debugger
+and LDB (the low-level debugger).  See also ENABLE-DEBUGGER. 0000000052) (division-by-zero ((0 d)) type, class NIL ## Class
+
+DIVISION-BY-ZERO names the condition-class #<SB-PCL::CONDITION-CLASS COMMON-LISP:DIVISION-BY-ZERO>:
+  Class precedence-list: DIVISION-BY-ZERO, ARITHMETIC-ERROR, ERROR,
+                         SERIOUS-CONDITION, CONDITION, SB-PCL::SLOT-OBJECT, T
+  Direct superclasses: ARITHMETIC-ERROR
+  No subclasses.
+  No direct slots. 0000000053) (*debug-condition* ((1 d))  NIL  0000000054) (*debug-readtable* ((1 d)) variable NIL ## Variable
+
+*DEBUG-READTABLE* names a special variable:
+  Value: #<READTABLE {1000027AD3}>
+  Documentation:
+    *READTABLE* for the debugger 0000000055) (defconstant-uneql ((0 d)) type, class NIL ## Class
+
+DEFCONSTANT-UNEQL names the condition-class #<SB-PCL::CONDITION-CLASS SB-EXT:DEFCONSTANT-UNEQL>:
+  Class precedence-list: DEFCONSTANT-UNEQL, SB-INT:REFERENCE-CONDITION, ERROR,
+                         SERIOUS-CONDITION, CONDITION, SB-PCL::SLOT-OBJECT, T
+  Direct superclasses: SB-INT:REFERENCE-CONDITION, ERROR
+  No subclasses.
+  Direct slots:
+    SB-KERNEL::NAME
+      Initargs: :NAME
+      Readers: DEFCONSTANT-UNEQL-NAME
+    SB-KERNEL::OLD-VALUE
+      Initargs: :OLD-VALUE
+      Readers: DEFCONSTANT-UNEQL-OLD-VALUE
+    SB-KERNEL::NEW-VALUE
+      Initargs: :NEW-VALUE
+      Readers: DEFCONSTANT-UNEQL-NEW-VALUE 0000000056) (define-alien-type ((0 d)) function, macro (define-alien-type name type) ## Function
+```lisp
+(define-alien-type name type)
+```
+Define the alien type NAME to be equivalent to TYPE. Name may be NIL for
+   STRUCT and UNION types, in which case the name is taken from the type
+   specifier. 0000000057) (delete-duplicates ((0 d)) function (delete-duplicates sequence &rest args &key (test #'eql) (test-not nil)
+                   (start 0) (end nil) from-end (key nil)) ## Function
+```lisp
+(delete-duplicates sequence &rest args &key (test #'eql) (test-not nil)
+                   (start 0) (end nil) from-end (key nil))
+```
+The elements of SEQUENCE are examined, and if any two match, one is
+   discarded. The resulting sequence, which may be formed by destroying the
+   given sequence, is returned.
+
+   The :TEST-NOT argument is deprecated. 0000000058) (delete-file-error ((0 d)) type, class NIL ## Class
+
+DELETE-FILE-ERROR names the condition-class #<SB-PCL::CONDITION-CLASS SB-EXT:DELETE-FILE-ERROR>:
+  Class precedence-list: DELETE-FILE-ERROR, SB-INT:SIMPLE-FILE-ERROR,
+                         SIMPLE-CONDITION, FILE-ERROR, ERROR, SERIOUS-CONDITION,
+                         CONDITION, SB-PCL::SLOT-OBJECT, T
+  Direct superclasses: SB-INT:SIMPLE-FILE-ERROR
+  No subclasses.
+  No direct slots. 0000000059) (deprecation-error ((0 d)) function, type, class (deprecation-error software version namespace name replacements) ## Function
+```lisp
+(deprecation-error software version namespace name replacements)
+```
+----------
+## Class
+
+DEPRECATION-ERROR names the condition-class #<SB-PCL::CONDITION-CLASS SB-EXT:DEPRECATION-ERROR>:
+  Documentation:
+    This error is signaled at run-time when an attempt is made to use
+    a thing that is in :FINAL deprecation, i.e. call a function or access
+    a variable.
+  Class precedence-list: DEPRECATION-ERROR, ERROR, SERIOUS-CONDITION,
+                         DEPRECATION-CONDITION, SB-INT:REFERENCE-CONDITION,
+                         CONDITION, SB-PCL::SLOT-OBJECT, T
+  Direct superclasses: ERROR, DEPRECATION-CONDITION
+  No subclasses.
+  No direct slots. 0000000060) (destructuring-bind ((0 d)) function, macro (destructuring-bind lambda-list expression &body body) ## Function
+```lisp
+(destructuring-bind lambda-list expression &body body)
+```
+Bind the variables in LAMBDA-LIST to the corresponding values in the
+tree structure resulting from the evaluation of EXPRESSION. 0000000061) (dynamic-space-size ((0 d)) function (dynamic-space-size) ## Function
+```lisp
+(dynamic-space-size)
+```
+Size of the dynamic space in bytes. 0000000062) (*debug-help-string* ((1 d)) variable NIL ## Variable
+
+*DEBUG-HELP-STRING* names a global variable:
+  Declared always-bound.
+  Value: "The debug prompt is square brackets, with number(s) indicating the current
+  control stack level and, if you've entered the debugger recursively, how
+  deeply recursed you are.
+Any command -- including the name of a restart -- may be uniquely abbreviated.
+The debugger rebinds various special variables for controlling i/o, sometimes
+  to defaults (much like WITH-STANDARD-IO-SYNTAX does) and sometimes to
+  its own special values, based on SB-EXT:*DEBUG-PRINT-VARIABLE-ALIST*.
+Debug commands do not affect *, //, and similar variables, but evaluation in
+  the debug loop does affect these variables.
+SB-DEBUG:*FLUSH-DEBUG-ERRORS* controls whether errors at the debug prompt
+  drop you deeper into the debugger. The default NIL allows recursive entry
+  to debugger.
+
+Getting in and out of the debugger:
+  TOPLEVEL, TOP  exits debugger and returns to top level REPL
+  RESTART        invokes restart numbered as shown (prompt if not given).
+  ERROR          prints the error condition and restart cases.
+
+  The number of any restart, or its name, or a unique abbreviation for its
+   name, is a valid command, and is the same as using RESTART to invoke
+   that restart.
+
+Changing frames:
+  UP     up frame         DOWN     down frame
+  BOTTOM bottom frame     FRAME n  frame n (n=0 for top frame)
+
+Inspecting frames:
+  BACKTRACE [n]  shows n frames going down the stack.
+  LIST-LOCALS, L lists locals in current frame.
+  PRINT, P       displays function call for current frame.
+  SOURCE [n]     displays frame's source form with n levels of enclosing forms.
+
+Stepping:
+  START Selects the CONTINUE restart if one exists and starts
+        single-stepping. Single stepping affects only code compiled with
+        under high DEBUG optimization quality. See User Manual for details.
+  STEP  Steps into the current form.
+  NEXT  Steps over the current form.
+  OUT   Stops stepping temporarily, but resumes it when the topmost frame that
+        was stepped into returns.
+  STOP  Stops single-stepping.
+
+Function and macro commands:
+ (SB-DEBUG:ARG n)
+    Return the n'th argument in the current frame.
+ (SB-DEBUG:VAR string-or-symbol [id])
+    Returns the value of the specified variable in the current frame.
+
+Other commands:
+  RETURN expr
+    Return the values resulting from evaluation of expr from the
+    current frame, if this frame was compiled with a sufficiently high
+    DEBUG optimization quality.
+
+  RESTART-FRAME
+    Restart execution of the current frame, if this frame is for a
+    global function which was compiled with a sufficiently high
+    DEBUG optimization quality.
+
+  SLURP
+    Discard all pending input on *STANDARD-INPUT*. (This can be
+    useful when the debugger was invoked to handle an error in
+    deeply nested input syntax, and now the reader is confused.)" 0000000063) (define-modify-macro ((0 d)) function, macro (define-modify-macro name lambda-list function &optional doc-string) ## Function
+```lisp
+(define-modify-macro name lambda-list function &optional doc-string)
+```
+Creates a new read-modify-write macro like PUSH or INCF. 0000000064) (define-symbol-macro ((0 d)) function, macro (define-symbol-macro name expansion) ## Function
+```lisp
+(define-symbol-macro name expansion)
+``` 0000000065) (defined-type-name-p ((0 d)) function (defined-type-name-p name &optional env) ## Function
+```lisp
+(defined-type-name-p name &optional env)
+```
+Returns T if NAME is known to name a type specifier, otherwise NIL. 0000000066) (do-external-symbols ((0 d)) function, macro (do-external-symbols (var &optional (package '*package*) result-form)
+ &body
+ body-decls) ## Function
+```lisp
+(do-external-symbols (var &optional (package '*package*) result-form)
+ &body
+ body-decls)
+```
+DO-EXTERNAL-SYMBOLS (VAR [PACKAGE [RESULT-FORM]]) {DECL}* {TAG | FORM}*
+   Executes the FORMs once for each external symbol in the given PACKAGE with
+   VAR bound to the current symbol. 0000000067) (define-alien-routine ((0 d)) function, macro (define-alien-routine name result-type &rest args) ## Function
+```lisp
+(define-alien-routine name result-type &rest args)
+```
+DEFINE-ALIEN-ROUTINE Name Result-Type {(Arg-Name Arg-Type [Style])}*
+
+Define a foreign interface function for the routine with the specified NAME.
+Also automatically DECLAIM the FTYPE of the defined function.
+
+NAME may be either a string, a symbol, or a list of the form (string symbol).
+
+RETURN-TYPE is the alien type for the function return value. VOID may be
+used to specify a function with no result.
+
+The remaining forms specify individual arguments that are passed to the
+routine. ARG-NAME is a symbol that names the argument, primarily for
+documentation. ARG-TYPE is the C type of the argument. STYLE specifies the
+way that the argument is passed.
+
+:IN
+      An :IN argument is simply passed by value. The value to be passed is
+      obtained from argument(s) to the interface function. No values are
+      returned for :In arguments. This is the default mode.
+
+:OUT
+      The specified argument type must be a pointer to a fixed sized object.
+      A pointer to a preallocated object is passed to the routine, and the
+      the object is accessed on return, with the value being returned from
+      the interface function. :OUT and :IN-OUT cannot be used with pointers
+      to arrays, records or functions.
+
+:COPY
+      This is similar to :IN, except that the argument values are stored
+      on the stack, and a pointer to the object is passed instead of
+      the value itself.
+
+:IN-OUT
+      This is a combination of :OUT and :COPY. A pointer to the argument is
+      passed, with the object being initialized from the supplied argument
+      and the return value being determined by accessing the object on
+      return. 0000000068) (define-setf-expander ((0 d)) function, macro (define-setf-expander access-fn lambda-list &body body) ## Function
+```lisp
+(define-setf-expander access-fn lambda-list &body body)
+```
+Syntax like DEFMACRO, but creates a setf expander function. The body
+  of the definition must be a form that returns five appropriate values. 0000000069) (directory-namestring ((0 d)) function (directory-namestring pathname) ## Function
+```lisp
+(directory-namestring pathname)
+```
+Return a string representation of the directory in PATHNAME. 0000000070) (double-float-epsilon ((0 d)) variable NIL ## Variable
+
+DOUBLE-FLOAT-EPSILON names a constant variable:
+  Value: 1.1102230246251568d-16 0000000071) (decode-universal-time ((0 d)) function (decode-universal-time universal-time &optional time-zone) ## Function
+```lisp
+(decode-universal-time universal-time &optional time-zone)
+```
+Converts a universal-time to decoded time format returning the following
+   nine values: second, minute, hour, date, month, year, day of week (0 =
+   Monday), T (daylight savings time) or NIL (standard time), and timezone.
+   Completely ignores daylight-savings-time when time-zone is supplied. 0000000072) (define-alien-callable ((0 d)) function, macro (define-alien-callable name
+    result-type
+    typed-lambda-list
+  &body
+  body) ## Function
+```lisp
+(define-alien-callable name
+    result-type
+    typed-lambda-list
+  &body
+  body)
+```
+Define an alien callable function in the alien callable namespace with result
+type RESULT-TYPE and with lambda list specifying the alien types of the
+arguments. 0000000073) (define-alien-variable ((0 d)) function, macro (define-alien-variable name type) ## Function
+```lisp
+(define-alien-variable name type)
+```
+Define NAME as an external alien variable of type TYPE. NAME should
+be a list of a string holding the alien name and a symbol to use as
+the Lisp name. If NAME is just a symbol or string, then the other name
+is guessed from the one supplied. 0000000074) (define-compiler-macro ((0 d)) function, macro (define-compiler-macro name
+    lambda-list
+  &body
+  body) ## Function
+```lisp
+(define-compiler-macro name
+    lambda-list
+  &body
+  body)
+```
+Define a compiler-macro for NAME. 0000000075) (define-source-context ((0 d)) function, macro (define-source-context name
+    lambda-list
+  &body
+  body) ## Function
+```lisp
+(define-source-context name
+    lambda-list
+  &body
+  body)
+```
+DEFINE-SOURCE-CONTEXT Name Lambda-List Form*
+   This macro defines how to extract an abbreviated source context from the
+   Named form when it appears in the compiler input. Lambda-List is a DEFMACRO
+   style lambda-list used to parse the arguments. The Body should return a
+   list of subforms suitable for a "~{~S ~}" format string. 0000000076) (deprecation-condition ((0 d)) type, class NIL ## Class
+
+DEPRECATION-CONDITION names the condition-class #<SB-PCL::CONDITION-CLASS SB-EXT:DEPRECATION-CONDITION>:
+  Documentation:
+    Superclass for deprecation-related error and warning
+    conditions.
+  Class precedence-list: DEPRECATION-CONDITION, SB-INT:REFERENCE-CONDITION,
+                         CONDITION, SB-PCL::SLOT-OBJECT, T
+  Direct superclasses: SB-INT:REFERENCE-CONDITION
+  Direct subclasses: DEPRECATION-ERROR, FINAL-DEPRECATION-WARNING,
+                     LATE-DEPRECATION-WARNING, EARLY-DEPRECATION-WARNING
+  Direct slots:
+    SB-KERNEL::NAMESPACE
+      Initargs: :NAMESPACE
+      Readers: DEPRECATION-CONDITION-NAMESPACE
+    SB-KERNEL::NAME
+      Initargs: :NAME
+      Readers: DEPRECATION-CONDITION-NAME
+    SB-KERNEL::REPLACEMENTS
+      Initargs: :REPLACEMENTS
+      Readers: DEPRECATION-CONDITION-REPLACEMENTS
+    SB-KERNEL::SOFTWARE
+      Initargs: :SOFTWARE
+      Readers: DEPRECATION-CONDITION-SOFTWARE
+    SB-KERNEL::VERSION
+      Initargs: :VERSION
+      Readers: DEPRECATION-CONDITION-VERSION
+    SB-KERNEL::RUNTIME-ERROR
+      Initargs: :RUNTIME-ERROR
+      Initform: 'NIL
+      Readers: DEPRECATION-CONDITION-RUNTIME-ERROR 0000000077) (disable-package-locks ((0 d))  NIL ## Declaration
+
+DISABLE-PACKAGE-LOCKS names an SBCL-specific declaration. 0000000078) (*disassemble-annotate* ((1 d)) variable NIL ## Variable
+
+*DISASSEMBLE-ANNOTATE* names a special variable:
+  Value: NIL
+  Documentation:
+    Annotate DISASSEMBLE output with source code. 0000000079) (defconstant-uneql-name ((0 d)) function (defconstant-uneql-name condition) ## Function
+```lisp
+(defconstant-uneql-name condition)
+``` 0000000080) (define-hash-table-test ((0 d)) function, macro (define-hash-table-test name hash-function) ## Function
+```lisp
+(define-hash-table-test name hash-function)
+```
+Defines NAME as a new kind of hash table test for use with the :TEST
+argument to MAKE-HASH-TABLE, and associates a default HASH-FUNCTION with it.
+
+NAME must be a symbol naming a global two argument equivalence predicate.
+Afterwards both 'NAME and #'NAME can be used with :TEST argument. In both
+cases HASH-TABLE-TEST will return the symbol NAME.
+
+HASH-FUNCTION must be a symbol naming a global hash function consistent with
+the predicate, or be a LAMBDA form implementing one in the current lexical
+environment. The hash function must compute the same hash code for any two
+objects for which NAME returns true, and subsequent calls with already hashed
+objects must always return the same hash code.
+
+Note: The :HASH-FUNCTION keyword argument to MAKE-HASH-TABLE can be used to
+override the specified default hash-function.
+
+Attempting to define NAME in a locked package as hash-table test causes a
+package lock violation.
+
+Examples:
+
+  ;;; 1.
+
+  ;; We want to use objects of type FOO as keys (by their
+  ;; names.) EQUALP would work, but would make the names
+  ;; case-insensitive -- which we don't want.
+  (defstruct foo (name nil :type (or null string)))
+
+  ;; Define an equivalence test function and a hash function.
+  (defun foo-name= (f1 f2) (equal (foo-name f1) (foo-name f2)))
+  (defun sxhash-foo-name (f) (sxhash (foo-name f)))
+
+  (define-hash-table-test foo-name= sxhash-foo-name)
+
+  ;; #'foo-name would work too.
+  (defun make-foo-table () (make-hash-table :test 'foo-name=))
+
+  ;;; 2.
+
+  (defun == (x y) (= x y))
+
+  (define-hash-table-test ==
+    (lambda (x)
+      ;; Hash codes must be consistent with test, so
+      ;; not (SXHASH X), since
+      ;;   (= 1 1.0)                   => T
+      ;;   (= (SXHASH 1) (SXHASH 1.0)) => NIL
+      ;; Note: this doesn't deal with complex numbers or
+      ;; bignums too large to represent as double floats.
+      (sxhash (coerce x 'double-float))))
+
+  ;; #'== would work too
+  (defun make-number-table () (make-hash-table :test '==)) 0000000081) (*debug-beginner-help-p* ((1 d)) variable NIL ## Variable
+
+*DEBUG-BEGINNER-HELP-P* names a special variable:
+  Value: T
+  Documentation:
+    Should the debugger display beginner-oriented help messages? 0000000082) (*derive-function-types* ((1 d)) variable NIL ## Variable
+
+*DERIVE-FUNCTION-TYPES* names a special variable:
+  Value: NIL
+  Documentation:
+    Should the compiler assume that function types will never change,
+      so that it can use type information inferred from current definitions
+      to optimize code which uses those definitions? Setting this true
+      gives non-ANSI, early-CMU-CL behavior. It can be useful for improving
+      the efficiency of stable code. 0000000083) (define-load-time-global ((0 d)) function, macro (define-load-time-global name value &optional (doc nil)) ## Function
+```lisp
+(define-load-time-global name value &optional (doc nil))
+```
+Defines NAME as a global variable that is always bound. VALUE is evaluated
+and assigned to NAME at load-time, but only if NAME is not already bound.
+
+Attempts to read NAME at compile-time will signal an UNBOUND-VARIABLE error
+unless it has otherwise been assigned a value.
+
+See also DEFGLOBAL which assigns the VALUE at compile-time too. 0000000084) (describe-compiler-policy ((0 d)) function (describe-compiler-policy &optional spec) ## Function
+```lisp
+(describe-compiler-policy &optional spec)
+```
+Print all global optimization settings, augmented by SPEC. 0000000085) (*default-external-format* ((1 d)) variable NIL ## Variable
+
+*DEFAULT-EXTERNAL-FORMAT* names a special variable:
+  Value: :UTF-8 0000000086) (define-method-combination ((0 d)) function, macro (define-method-combination name
+  . args) ## Function
+```lisp
+(define-method-combination name
+  . args)
+``` 0000000087) (deprecation-condition-name ((0 d)) function (deprecation-condition-name condition) ## Function
+```lisp
+(deprecation-condition-name condition)
+``` 0000000088) (*default-pathname-defaults* ((1 d)) variable NIL ## Variable
+
+*DEFAULT-PATHNAME-DEFAULTS* names a special variable:
+  Declared type: PATHNAME
+  Declared always-bound.
+  Value: #P"/home/runner/Lisp-sbcl/" 0000000089) (defconstant-uneql-new-value ((0 d)) function (defconstant-uneql-new-value condition) ## Function
+```lisp
+(defconstant-uneql-new-value condition)
+``` 0000000090) (defconstant-uneql-old-value ((0 d)) function (defconstant-uneql-old-value condition) ## Function
+```lisp
+(defconstant-uneql-old-value condition)
+``` 0000000091) (*debug-print-variable-alist* ((1 d)) variable NIL ## Variable
+
+*DEBUG-PRINT-VARIABLE-ALIST* names a special variable:
+  Value: NIL
+  Documentation:
+    an association list describing new bindings for special variables
+    to be used within the debugger. Eg.
+    
+     ((*PRINT-LENGTH* . 10) (*PRINT-LEVEL* . 6) (*PRINT-PRETTY* . NIL))
+    
+    The variables in the CAR positions are bound to the values in the CDR
+    during the execution of some debug commands. When evaluating arbitrary
+    expressions in the debugger, the normal values of the printer control
+    variables are in effect.
+    
+    Initially empty, *DEBUG-PRINT-VARIABLE-ALIST* is typically used to
+    provide bindings for printer control variables. 0000000092) (deprecation-condition-version ((0 d)) function (deprecation-condition-version condition) ## Function
+```lisp
+(deprecation-condition-version condition)
+``` 0000000093) (double-float-negative-epsilon ((0 d)) variable NIL ## Variable
+
+DOUBLE-FLOAT-NEGATIVE-EPSILON names a constant variable:
+  Value: 5.551115123125784d-17 0000000094) (deprecation-condition-software ((0 d)) function (deprecation-condition-software condition) ## Function
+```lisp
+(deprecation-condition-software condition)
+``` 0000000095) (double-float-negative-infinity ((0 d)) variable NIL ## Variable
+
+DOUBLE-FLOAT-NEGATIVE-INFINITY names a constant variable:
+  Value: #.DOUBLE-FLOAT-NEGATIVE-INFINITY 0000000096) (double-float-positive-infinity ((0 d)) variable NIL ## Variable
+
+DOUBLE-FLOAT-POSITIVE-INFINITY names a constant variable:
+  Value: #.DOUBLE-FLOAT-POSITIVE-INFINITY 0000000097) (deprecation-condition-namespace ((0 d)) function (deprecation-condition-namespace condition) ## Function
+```lisp
+(deprecation-condition-namespace condition)
+``` 0000000098) (decimal-with-grouped-digits-width ((0 d)) function (decimal-with-grouped-digits-width value &key (comma-interval 3)) ## Function
+```lisp
+(decimal-with-grouped-digits-width value &key (comma-interval 3))
+``` 0000000099))))
+ 6: ((:METHOD LEM-LANGUAGE-SERVER::CALL-LSP-METHOD-AUX (LEM-LANGUAGE-SERVER::COMPLETION-REQUEST T)) #<unused argument> #<COMPLETION-PARAMS {1002E87E73}>)
+ 7: ((LAMBDA NIL :IN LEM-LANGUAGE-SERVER:CALL-LSP-METHOD))
+ 8: (LEM-LANGUAGE-SERVER::CALL-WITH-ERROR-HANDLER #<FUNCTION (LAMBDA NIL :IN LEM-LANGUAGE-SERVER:CALL-LSP-METHOD) {10046127BB}>)
+ 9: ((:METHOD JSONRPC/MAPPER:DISPATCH (JSONRPC/MAPPER:EXPOSABLE JSONRPC/REQUEST-RESPONSE:REQUEST)) #<SERVER {1003FE8AA3}> #S(REQUEST :METHOD textDocument/completion :PARAMS #<HASH-TABLE :TEST EQUAL :COUNT 3 {1002BA54A3}> :ID 934107934))
+ 10: ((:METHOD JSONRPC/MAPPER:DISPATCH :AROUND (JSONRPC/MAPPER:EXPOSABLE JSONRPC/REQUEST-RESPONSE:REQUEST)) #<SERVER {1003FE8AA3}> #S(REQUEST :METHOD textDocument/completion :PARAMS #<HASH-TABLE :TEST EQUAL :COUNT 3 {1002BA54A3}> :ID 934107934))
+ 11: ((:METHOD JSONRPC/CONNECTION:PROCESS-REQUEST (JSONRPC/CONNECTION:CONNECTION JSONRPC/REQUEST-RESPONSE:REQUEST)) #<CONNECTION {1005DF6B93}> #S(REQUEST :METHOD textDocument/completion :PARAMS #<HASH-TABLE :TEST EQUAL :COUNT 3 {1002BA54A3}> :ID 934107934))
+ 12: ((:METHOD JSONRPC/TRANSPORT/INTERFACE:RUN-PROCESSING-LOOP (JSONRPC/TRANSPORT/INTERFACE:TRANSPORT T)) #<STDIO-TRANSPORT {1005CAC473}> #<CONNECTION {1005DF6B93}>)
+ 13: ((LABELS BORDEAUX-THREADS::%BINDING-DEFAULT-SPECIALS-WRAPPER :IN BORDEAUX-THREADS::BINDING-DEFAULT-SPECIALS))
+ 14: ((FLET SB-UNIX::BODY :IN SB-THREAD::RUN))
+ 15: ((FLET "WITHOUT-INTERRUPTS-BODY-156" :IN SB-THREAD::RUN))
+ 16: ((FLET SB-UNIX::BODY :IN SB-THREAD::RUN))
+ 17: ((FLET "WITHOUT-INTERRUPTS-BODY-149" :IN SB-THREAD::RUN))
+ 18: (SB-THREAD::RUN)
+ 19: ("foreign function: call_into_lisp_")
+ 20: ("foreign function: funcall1")Content-Length: 83
+
+{"jsonrpc":"2.0","error":{"code":-32603,"message":"Internal error"},"id":934107934}Content-Length: 261
+
+{"jsonrpc":"2.0","result":[{"name":"FOO","detail":"(defun foo (arg)","kind":12,"range":{"start":{"line":12,"character":10},"end":{"line":12,"character":10}},"selectionRange":{"start":{"line":12,"character":10},"end":{"line":12,"character":10}}}],"id":898990462}Content-Length: 261
+
+{"jsonrpc":"2.0","result":[{"name":"FOO","detail":"(defun foo (arg)","kind":12,"range":{"start":{"line":12,"character":10},"end":{"line":12,"character":10}},"selectionRange":{"start":{"line":12,"character":10},"end":{"line":12,"character":10}}}],"id":973350928}Content-Length: 261
+
+{"jsonrpc":"2.0","result":[{"name":"FOO","detail":"(defun foo (arg)","kind":12,"range":{"start":{"line":12,"character":10},"end":{"line":12,"character":10}},"selectionRange":{"start":{"line":12,"character":10},"end":{"line":12,"character":10}}}],"id":275716462}Content-Length: 262
+
+{"jsonrpc":"2.0","result":[{"name":"FOO","detail":"(defun foo (arg)","kind":12,"range":{"start":{"line":12,"character":10},"end":{"line":12,"character":10}},"selectionRange":{"start":{"line":12,"character":10},"end":{"line":12,"character":10}}}],"id":1208994539}Content-Length: 261
+
+{"jsonrpc":"2.0","result":[{"name":"FOO","detail":"(defun foo (arg)","kind":12,"range":{"start":{"line":12,"character":10},"end":{"line":12,"character":10}},"selectionRange":{"start":{"line":12,"character":10},"end":{"line":12,"character":10}}}],"id":396075572}Content-Length: 262
+
+{"jsonrpc":"2.0","result":[{"name":"FOO","detail":"(defun foo (arg)","kind":12,"range":{"start":{"line":12,"character":10},"end":{"line":12,"character":10}},"selectionRange":{"start":{"line":12,"character":10},"end":{"line":12,"character":10}}}],"id":1242383114}Content-Length: 134
+
+{"jsonrpc":"2.0","result":{"contents":"","range":{"start":{"line":8,"character":11},"end":{"line":8,"character":15}}},"id":1207536077}Content-Length: 134
+
+{"jsonrpc":"2.0","result":{"contents":"","range":{"start":{"line":16,"character":1},"end":{"line":16,"character":4}}},"id":1341815390}Content-Length: 134
+
+{"jsonrpc":"2.0","result":{"contents":"","range":{"start":{"line":16,"character":1},"end":{"line":16,"character":4}}},"id":1599915366}Content-Length: 44
+
+{"jsonrpc":"2.0","result":[],"id":849185325}Content-Length: 134
+
+{"jsonrpc":"2.0","result":{"contents":"","range":{"start":{"line":12,"character":7},"end":{"line":12,"character":10}}},"id":972058696}Content-Length: 133
+
+{"jsonrpc":"2.0","result":{"contents":"","range":{"start":{"line":16,"character":1},"end":{"line":16,"character":4}}},"id":236447804}

@@ -1,0 +1,85 @@
+Content-Length: 1679
+
+{"method":"initialize","params":{"capabilities":{"textDocument":{"synchronization":{"dynamicRegistration":true,"didSave":true},"signatureHelp":{"dynamicRegistration":true,"signatureInformation":{"documentationFormat":["markdown","plaintext"]}},"publishDiagnostics":{"relatedInformation":true,"tagSupport":{"valueSet":[1,2]}},"formatting":{"dynamicRegistration":true},"documentSymbol":{"dynamicRegistration":true,"hierarchicalDocumentSymbolSupport":true,"symbolKind":{"valueSet":[18,17,5,14,9,10,22,24,8,1,12,11,20,6,2,3,19,25,4,7,15,23,26,13]}},"definition":{"dynamicRegistration":true,"linkSupport":true},"typeDefinition":{"dynamicRegistration":true},"implementation":{"dynamicRegistration":true},"references":{"dynamicRegistration":true},"rename":{"dynamicRegistration":true,"prepareSupport":true},"completion":{"dynamicRegistration":true,"completionItem":{"documentationFormat":["markdown","plaintext"],"snippetSupport":true}},"codeAction":{"dynamicRegistration":true,"codeActionLiteralSupport":{"codeActionKind":{"valueSet":["","quickfix","refactor","refactor.extract","refactor.inline","refactor.rewrite","source","source.organizeImports","source.fixAll"]}}},"hover":{"dynamicRegistration":true,"contentFormat":["markdown","plaintext"]}},"workspace":{"applyEdit":true,"didChangeConfiguration":{"dynamicRegistration":true},"configuration":true,"executeCommand":{"dynamicRegistration":true},"workspaceEdit":{"documentChanges":true,"resourceOperations":["create","delete","rename"]}}},"processId":null,"rootUri":"file:///home/runner/Lisp-sbcl","workspaceFolders":[{"name":"file:///home/runner/Lisp-sbcl","uri":"file:///home/runner/Lisp-sbcl"}]},"id":1761679872,"jsonrpc":"2.0"}Content-Length: 52
+
+{"method":"initialized","params":{},"jsonrpc":"2.0"}Content-Length: 585
+
+{"method":"textDocument/didOpen","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp","languageId":"lisp","text":";; (ql:register-local-projects)\n;; (ql:quickload \"poiu\")\n;; (require \"poiu\")\n;; \n;; (write-line \"Shall we begin?\")\n;; \n;; (let ((fpid (poiu/fork:posix-fork)))\n;;   (cond\n;;     ((< fpid 0) (write-line \"Unable to fork!\"))\n;;     ((= fpid 0) (write-line \"Hello, World!\"))\n;;     (t (write-line (format nil \"I'm a parent! ~D\" fpid)))))\n;; \n(defun foo (arg)\n  (write-line arg))\n\n\n(foo \"asdf\")","version":0}},"jsonrpc":"2.0"}Content-Length: 146
+
+{"method":"textDocument/documentSymbol","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"}},"id":38331207,"jsonrpc":"2.0"}Content-Length: 176
+
+{"method":"textDocument/hover","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"},"position":{"line":16,"character":3}},"id":1445083716,"jsonrpc":"2.0"}Content-Length: 180
+
+{"method":"textDocument/definition","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"},"position":{"line":16,"character":1}},"id":277931378,"jsonrpc":"2.0"}Content-Length: 181
+
+{"method":"textDocument/definition","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"},"position":{"line":16,"character":3}},"id":1438181251,"jsonrpc":"2.0"}Content-Length: 266
+
+{"method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp","version":1},"contentChanges":[{"range":{"start":{"line":16,"character":12},"end":{"line":16,"character":12}},"rangeLength":0,"text":"\n"}]},"jsonrpc":"2.0"}Content-Length: 264
+
+{"method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp","version":2},"contentChanges":[{"range":{"start":{"line":17,"character":0},"end":{"line":17,"character":0}},"rangeLength":0,"text":"\n"}]},"jsonrpc":"2.0"}Content-Length: 147
+
+{"method":"textDocument/documentSymbol","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"}},"id":680334104,"jsonrpc":"2.0"}Content-Length: 264
+
+{"method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp","version":3},"contentChanges":[{"range":{"start":{"line":18,"character":0},"end":{"line":18,"character":0}},"rangeLength":0,"text":"()"}]},"jsonrpc":"2.0"}Content-Length: 147
+
+{"method":"textDocument/documentSymbol","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"}},"id":171540258,"jsonrpc":"2.0"}Content-Length: 263
+
+{"method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp","version":4},"contentChanges":[{"range":{"start":{"line":18,"character":1},"end":{"line":18,"character":1}},"rangeLength":0,"text":"d"}]},"jsonrpc":"2.0"}Content-Length: 208
+
+{"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"},"position":{"line":18,"character":2},"context":{"triggerKind":1}},"id":934107934,"jsonrpc":"2.0"}Content-Length: 147
+
+{"method":"textDocument/documentSymbol","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"}},"id":898990462,"jsonrpc":"2.0"}Content-Length: 263
+
+{"method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp","version":5},"contentChanges":[{"range":{"start":{"line":18,"character":2},"end":{"line":18,"character":2}},"rangeLength":0,"text":"e"}]},"jsonrpc":"2.0"}Content-Length: 70
+
+{"method":"$/cancelRequest","params":{"id":898990462},"jsonrpc":"2.0"}Content-Length: 147
+
+{"method":"textDocument/documentSymbol","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"}},"id":973350928,"jsonrpc":"2.0"}Content-Length: 263
+
+{"method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp","version":6},"contentChanges":[{"range":{"start":{"line":18,"character":3},"end":{"line":18,"character":3}},"rangeLength":0,"text":"f"}]},"jsonrpc":"2.0"}Content-Length: 70
+
+{"method":"$/cancelRequest","params":{"id":973350928},"jsonrpc":"2.0"}Content-Length: 147
+
+{"method":"textDocument/documentSymbol","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"}},"id":275716462,"jsonrpc":"2.0"}Content-Length: 125
+
+{"method":"textDocument/didSave","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"}},"jsonrpc":"2.0"}Content-Length: 262
+
+{"method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp","version":7},"contentChanges":[{"range":{"start":{"line":18,"character":3},"end":{"line":18,"character":4}},"rangeLength":1,"text":""}]},"jsonrpc":"2.0"}Content-Length: 70
+
+{"method":"$/cancelRequest","params":{"id":275716462},"jsonrpc":"2.0"}Content-Length: 148
+
+{"method":"textDocument/documentSymbol","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"}},"id":1208994539,"jsonrpc":"2.0"}Content-Length: 262
+
+{"method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp","version":8},"contentChanges":[{"range":{"start":{"line":17,"character":0},"end":{"line":18,"character":4}},"rangeLength":5,"text":""}]},"jsonrpc":"2.0"}Content-Length: 71
+
+{"method":"$/cancelRequest","params":{"id":1208994539},"jsonrpc":"2.0"}Content-Length: 147
+
+{"method":"textDocument/documentSymbol","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"}},"id":396075572,"jsonrpc":"2.0"}Content-Length: 263
+
+{"method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp","version":9},"contentChanges":[{"range":{"start":{"line":16,"character":12},"end":{"line":17,"character":0}},"rangeLength":1,"text":""}]},"jsonrpc":"2.0"}Content-Length: 70
+
+{"method":"$/cancelRequest","params":{"id":396075572},"jsonrpc":"2.0"}Content-Length: 148
+
+{"method":"textDocument/documentSymbol","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"}},"id":1242383114,"jsonrpc":"2.0"}Content-Length: 125
+
+{"method":"textDocument/didSave","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"}},"jsonrpc":"2.0"}Content-Length: 125
+
+{"method":"textDocument/didSave","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"}},"jsonrpc":"2.0"}Content-Length: 176
+
+{"method":"textDocument/hover","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"},"position":{"line":8,"character":15}},"id":1207536077,"jsonrpc":"2.0"}Content-Length: 71
+
+{"method":"$/cancelRequest","params":{"id":1207536077},"jsonrpc":"2.0"}Content-Length: 176
+
+{"method":"textDocument/hover","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"},"position":{"line":16,"character":3}},"id":1341815390,"jsonrpc":"2.0"}Content-Length: 176
+
+{"method":"textDocument/hover","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"},"position":{"line":16,"character":3}},"id":1599915366,"jsonrpc":"2.0"}Content-Length: 180
+
+{"method":"textDocument/definition","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"},"position":{"line":16,"character":3}},"id":849185325,"jsonrpc":"2.0"}Content-Length: 71
+
+{"method":"$/cancelRequest","params":{"id":1599915366},"jsonrpc":"2.0"}Content-Length: 175
+
+{"method":"textDocument/hover","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"},"position":{"line":12,"character":9}},"id":972058696,"jsonrpc":"2.0"}Content-Length: 70
+
+{"method":"$/cancelRequest","params":{"id":849185325},"jsonrpc":"2.0"}Content-Length: 175
+
+{"method":"textDocument/hover","params":{"textDocument":{"uri":"file:///home/runner/Lisp-sbcl/main.lisp"},"position":{"line":16,"character":2}},"id":236447804,"jsonrpc":"2.0"}

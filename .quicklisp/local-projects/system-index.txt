@@ -1,0 +1,7 @@
+poiu/poiu.asd
+micros/micros.asd
+lem-base/lem-base.asd
+lem-lsp-base/lem-lsp-base.asd
+lem-lisp-syntax/lem-lisp-syntax.asd
+lem-socket-utils/lem-socket-utils.asd
+lem-language-server/lem-language-server.asd

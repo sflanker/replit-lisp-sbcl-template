@@ -1,0 +1,11 @@
+run = ".quicklisp/sbcl-quicklisp.sh --load main.lisp"
+
+[nix]
+channel = "stable-23_05"
+
+[languages]
+  [languages.lisp]
+  pattern = "**/{*.lisp}"
+  
+    [languages.lisp.languageServer]
+    start = "tee ~/language-server-in.txt | .quicklisp/sbcl-quicklisp.sh --noinform --script .language-server/main.lisp 2> ~/language-server.err | tee ~/language-server-out.log"
